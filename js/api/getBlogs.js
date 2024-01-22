@@ -1,18 +1,21 @@
-import { apiUrl } from "./api/constants.js";
+import { apiUrl } from "../api/constants.js";
 
 export async function getBlogs() {
         try {
             const response = await fetch(apiUrl); // assuming apiUrl is a valid URL
             const posts = await response.json();
+            console.log(posts)
     
             // Loop through the posts and access the HTML content
             posts.forEach(post => {
                 const postHTML = post.content.rendered; // Get the HTML content of the post
-                console.log(postHTML); // Do whatever you need with the HTML content
+                /* console.log(postHTML); */
+                return postHTML;
             });
         } catch (error) {
             console.log('Error fetching posts:', error);
         }
+      
     }
     
 
