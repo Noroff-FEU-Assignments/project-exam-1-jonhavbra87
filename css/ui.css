@@ -133,6 +133,7 @@ iframe.map {
   background: var(--alertbackground);
 }
 
+/* The loader is from www.... */
 .lds-spinner {
   color: var(--primary);
   display: inline-block;
@@ -210,4 +211,13 @@ iframe.map {
   100% {
     opacity: 0;
   }
+}
+
+.wp-block-image {
+  width: 50%;
+  size: 50%;
+}
+
+figure {
+  max-width: 50%;
 }

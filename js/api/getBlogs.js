@@ -1,25 +1,54 @@
-import { apiUrl } from "../api/constants.js";
+import { postsUrl } from "../api/constants.js";
+
 
 export async function getBlogs() {
-        try {
-            const response = await fetch(apiUrl); // assuming apiUrl is a valid URL
-            const posts = await response.json();
-            console.log(posts)
+    const response = await fetch(postsUrl);
     
-            // Loop through the posts and access the HTML content
-            posts.forEach(post => {
-                const postHTML = post.content.rendered; // Get the HTML content of the post
-                /* console.log(postHTML); */
-                return postHTML;
-            });
-        } catch (error) {
-            console.log('Error fetching posts:', error);
-        }
-      
+    if (response.ok) {
+        return await response.json();
+    } 
+    throw new Error("Request failed!")
     }
     
 
 
+/* // Function to fetch blog posts
+export async function fetchBlogPosts() {
+    fetch(postUrl)
+        .then(response => response.json())
+        .then(posts => {
+            console.log('Blog Posts:', posts);
+            // Process the posts here
+        })
+        .catch(error => console.error('Error fetching posts:', error));
+}
+
+
+
+// Call the functions to fetch data
+fetchBlogPosts();
+
+ */
+
+
+
+
+
+
+/* console.log(getBlogs()); */
+  /*   try {
+        const response = await fetch(apiUrl); // assuming apiUrl is a valid URL
+        const posts = await response.json();
+              
+        // Loop through the posts and access the HTML content
+        posts.forEach(post => {
+            const postHTML = post.content.rendered; // Get the HTML content of the post
+            console.log(postHTML);
+            
+        });
+    } catch (error) {
+        console.log('Error fetching posts:', error);
+    } */
 /* export async function getBlog(id) {
     const response = await fetch(apiUrl + id);
     const blog = await response.json();

@@ -1,4 +1,12 @@
 const host = "https://kongsvinger-it.no";
-const endpoint = "/wp-json/wp/v2/posts/";
-export const apiUrl = host + endpoint;
+const postEndpoint = "/wp-json/wp/v2/posts/";
+const mediaEndpoint ="/wp-json/wp/v2/media"
+
+export const postsUrl = new URL(postEndpoint, host);
+
+export const mediaUrl = new URL(mediaEndpoint, host);
+
+
+
+console.log(mediaUrl);
 
