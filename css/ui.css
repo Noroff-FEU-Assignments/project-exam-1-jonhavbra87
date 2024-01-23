@@ -213,11 +213,11 @@ iframe.map {
   }
 }
 
-.wp-block-image {
+/* .wp-block-image {
   width: 50%;
   size: 50%;
-}
+} */
 
-figure {
-  max-width: 50%;
+.wp-img {
+  max-width: 200px;
 }

@@ -1,5 +1,21 @@
 export function renderBlogs(postData) {
     const mainElement = document.querySelector(".blogposts");
+
+    const blogHTML = `
+        <a href="/blog_specific/?id=${postData.id}" data-id="${postData.id}">
+            <div>
+                <h3 style="margin-top: 10px;">${postData.title.rendered}</h3>
+                <span>${postData.excerpt.rendered}</span>
+                <span class="wp-img" >${postData.content.rendered}</span>
+            </div>
+        </a>
+    `;
+
+    mainElement.insertAdjacentHTML('beforeend', blogHTML);
+}
+
+/* export function renderBlogs(postData) {
+    const mainElement = document.querySelector(".blogposts");
     
 
     const blogElement = document.createElement("a");
@@ -34,7 +50,7 @@ export function renderBlogs2(blogDetails) {
     blogDetails.forEach(renderBlogs);
     
 } 
-
+ */
 //renderBlogs2(renderBlogs).then(console.log)
 
 /* 
