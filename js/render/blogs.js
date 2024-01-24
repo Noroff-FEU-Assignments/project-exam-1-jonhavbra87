@@ -1,18 +1,92 @@
 export function renderBlogs(postData) {
     const mainElement = document.querySelector(".blogposts");
 
+    // Link element
+    const blogElement = document.createElement("a");
+    blogElement.href = "/blog_specific/?id=" + postData.id;
+    blogElement.dataset.id = postData.id;
+    
+
+    // Container for the blog post
+    const containerElement = document.createElement("div");
+    blogElement.classList.add("blog-container");
+    
+
+// Check if the post has a featured image and create an img element
+const featuredMedia = postData._embedded?.['wp:featuredmedia']?.[0]?.source_url;
+
+if (featuredMedia) {
+    const img = document.createElement("img");
+    img.src = featuredMedia;
+    img.alt = postData.title.rendered; 
+    img.classList.add("blog-img"); 
+    containerElement.appendChild(img);
+    containerElement.appendChild(img);
+}
+    // Create and append the title element
+    const title = document.createElement("h3");
+    title.textContent = postData.title.rendered;
+    title.style.marginTop = "10px";
+    containerElement.appendChild(title);
+
+    // Create and append the text element
+    const text = document.createElement("span");
+    text.innerHTML = postData.excerpt.rendered;
+    containerElement.appendChild(text);
+
+    // Append the container to the blog element
+    blogElement.appendChild(containerElement);
+
+    // Append the blog element to the main container
+    mainElement.appendChild(blogElement);
+    
+    
+}
+
+
+/* 
+export function renderBlogs(postData, mediaData) {
+    const mainElement = document.querySelector(".blogposts");
+    console.log(mediaData);
+
+    // Finn medieobjektet som matcher featured_media ID-en i postData
+    const media = mediaData.find(mediaItem => mediaItem.id === postData.featured_media);
+
     const blogHTML = `
-        <a href="/blog_specific/?id=${postData.id}" data-id="${postData.id}">
+        <a href="/blogDetails/?id=${postData.id}" data-id="${postData.id}">
             <div>
                 <h3 style="margin-top: 10px;">${postData.title.rendered}</h3>
+                ${media ? `<img src="${media.source_url}" alt="Blog image">` : ''}
                 <span>${postData.excerpt.rendered}</span>
-                <span class="wp-img" >${postData.content.rendered}</span>
+                <time>${new Date(postData.date).toLocaleDateString()}</time>
             </div>
         </a>
     `;
 
     mainElement.insertAdjacentHTML('beforeend', blogHTML);
 }
+ */
+
+
+/* export function renderBlogs(postData, mediaUrl) {
+    const mainElement = document.querySelector(".blogposts");
+    const media = mediaData.find(media => media.id === postData.featured_media);
+
+    const blogHTML = `
+        <a href="/blogDetails/?id=${postData.id}" data-id="${postData.id}">
+            <div>
+                <h3 style="margin-top: 10px;">${postData.title.rendered}</h3>
+                ${media ? `<img src="${media.source_url}" alt="Blog image">` : ''}
+                <span>${postData.excerpt.rendered}</span>
+                <time>${new Date(postData.date).toLocaleDateString()}</time>
+            </div>
+        </a>
+    `;
+
+    mainElement.insertAdjacentHTML('beforeend', blogHTML);
+}
+ */
+
 
 /* export function renderBlogs(postData) {
     const mainElement = document.querySelector(".blogposts");

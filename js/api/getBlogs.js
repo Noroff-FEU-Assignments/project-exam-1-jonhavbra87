@@ -1,4 +1,5 @@
 import { postsUrl } from "../api/constants.js";
+/* import { mediaUrl } from "../api/constants.js"; */
 
 
 export async function getBlogs() {
@@ -9,9 +10,18 @@ export async function getBlogs() {
     } 
     throw new Error("Request failed!")
     }
+
+
+/* export async function getMedia() {
+    const response = await fetch(mediaUrl);
     
+    if (response.ok) {
+        return await response.json();
 
-
+    } 
+    throw new Error("Request failed!")
+    }
+ */
 /* // Function to fetch blog posts
 export async function fetchBlogPosts() {
     fetch(postUrl)

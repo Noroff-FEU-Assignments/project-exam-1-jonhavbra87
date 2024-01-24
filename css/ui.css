@@ -1,16 +1,4 @@
 /* Header, Footer, navigation, alerts, pop ups */
-body {
-  margin: 0;
-  background: var(--light);
-  box-sizing: border-box;
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-  /*   gap: 1rem; */
-  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond,
-    "Times New Roman", serif;
-}
 
 header,
 footer {
@@ -18,10 +6,6 @@ footer {
 }
 
 header {
-  grid-row: 1;
-  grid-column: 1 / -1;
-  display: flex;
-  position: static;
   background-color: var(--primary);
   text-transform: uppercase;
   height: 100px;
@@ -62,19 +46,12 @@ header .navigation a {
 }
 
 main {
-  grid-row: 2;
-  grid-column: 1 / -1;
   margin: 0 auto;
   width: 100%;
   max-width: 60rem;
 }
 
 footer {
-  grid-row: 3;
-  grid-column: 1 / -1;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 200px;
@@ -131,6 +108,27 @@ iframe.map {
   padding: var(--padding);
   color: var(--light);
   background: var(--alertbackground);
+}
+
+/* Blog posts */
+.blogposts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.blog-container {
+  max-width: 90%;
+  display: block;
+  background-color: var(--variant_of_black);
+  color: var(--light);
+  border-radius: 30px 30px 0 0;
+  justify-content: center;
+}
+
+.blog-container img {
+  max-width: 100%;
+  border-radius: 30px 30px 0 0;
+  border-bottom: solid var(--primary);
 }
 
 /* The loader is from www.... */
@@ -211,13 +209,4 @@ iframe.map {
   100% {
     opacity: 0;
   }
-}
-
-/* .wp-block-image {
-  width: 50%;
-  size: 50%;
-} */
-
-.wp-img {
-  max-width: 200px;
 }
