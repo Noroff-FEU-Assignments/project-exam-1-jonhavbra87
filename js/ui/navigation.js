@@ -1,3 +1,15 @@
+// navigation.js
+
+export function initializeNavigation() {
+    let menuToggle = document.getElementById('menu-toggle');
+    let navigation = document.querySelector('.navigation');
+
+    menuToggle.addEventListener('click', function() {
+        navigation.classList.toggle('open');
+    });
+}
+
+/*
 document.addEventListener('DOMContentLoaded', function() {
     const menu = document.getElementById('main-nav').querySelector('ul');
     const menuButton = document.getElementById('menu-button'); // You need to add this button in HTML
@@ -12,3 +24,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+*/

@@ -1,38 +1,40 @@
 /* @media (max-with: 40rem) */
-
-/* Hides the actual checkbox */
-.menu-toggle {
-    display: none;
-}
-
-/* Style for the hamburger icon */
-.menu-icon {
-    display: none; /* Initially hidden */
-    font-size: 30px; /* Size of the hamburger icon */
-    cursor: pointer;
-}
-
-/* Styles for the navigation menu */
+/* Style for the navigation menu */
 .navigation {
     list-style: none;
     padding: 0;
-    display: flex; /* Change this to 'block' if you want a vertical menu */
-    /* Additional styling as needed */
+    margin: 0;
+    display: flex;
+    /* More styles for navigation items */
+}
+.menu-toggle {
+    display: none; /* Hidden by default on larger screens */
+    
 }
 
-@media screen and (max-width: 40rem) {
-    .menu-icon {
-        display: block; /* Show the icon */
+
+/* Hide menu items and show toggle button on smaller screens */
+@media screen and (max-width: 600px) {
+    .menu-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed; /* Keep the button fixed in place */
+    top: 20px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    z-index: 100; /* Ensure it's above other elements */
     }
 
-    /* Hide the menu initially */
     .navigation {
-        display: none;
+        display: none; /* Hide navigation on smaller screens */
     }
 
-    /* Show menu when checkbox is checked */
-    .menu-toggle:checked + .menu-icon + .navigation {
-        display: block; /* Change this to 'flex' if you prefer */
+    .navigation li {
+        width: 100%; /* Full width for each item */
+    }
+    .navigation.open {
+        display: flex; /* Show navigation when class 'open' is added */
+        flex-direction: column;
     }
 }
 
