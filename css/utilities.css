@@ -14,7 +14,7 @@ header {
   grid-row: 1;
   grid-column: 1 / -1;
   display: flex;
-  position: static;
+  position: relative;
 }
 
 main {

@@ -19,21 +19,32 @@
     display: block;
     font-size: 30px;
     cursor: pointer;
-    position: fixed; /* Keep the button fixed in place */
+    position: absolute;  /* Keep the button fixed in place */
     top: 20px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
     z-index: 100; /* Ensure it's above other elements */
     }
 
     .navigation {
-        display: none; /* Hide navigation on smaller screens */
+        display: none !important; /* Hide navigation on smaller screens */
+        position: absolute; /* Position the menu absolutely */
+    top: 100px; /* Adjust this value to the height of your header */
+    left: 0;
+    width: 100%;
+    text-align: center;
     }
 
     .navigation li {
-        width: 100%; /* Full width for each item */
+        color: var(--light);
+        background-color: var(--primary);
     }
+
+    .navigation:hover {
+    opacity: 70%;
+    }
+
     .navigation.open {
-        display: flex; /* Show navigation when class 'open' is added */
+        display: flex !important; /* Show navigation when class 'open' is added */
         flex-direction: column;
     }
 }
@@ -41,12 +52,12 @@
 /* Style navigation links */
 .navigation a {
     text-decoration: none;
-    color: #333;
+    color: var(--light);
     padding: 10px;
     display: block;
 }
 
 /* Hover effect for links */
 .navigation a:hover {
-    background-color: #f4f4f4;
+    opacity: 0.5;
 }
