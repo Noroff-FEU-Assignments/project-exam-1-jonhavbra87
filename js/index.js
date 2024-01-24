@@ -1,12 +1,10 @@
 import { getBlogs } from "./api/getBlogs.js";
-/* import { fetchMedia } from "./api/getMedia.js"; */
 import { renderBlogs } from "./render/blogs.js"
 import { initializeNavigation } from './ui/navigation.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
 });
-
 
 if (window.location.pathname === "/html/blog/index.html") {
     getBlogs().then(posts => {

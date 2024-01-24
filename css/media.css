@@ -26,8 +26,8 @@
     }
 
     .navigation {
-        display: none !important; /* Hide navigation on smaller screens */
-        position: absolute; /* Position the menu absolutely */
+    display: none !important; /* Hide navigation on smaller screens */
+    position: absolute; /* Position the menu absolutely */
     top: 100px; /* Adjust this value to the height of your header */
     left: 0;
     width: 100%;
@@ -35,17 +35,14 @@
     }
 
     .navigation li {
-        color: var(--light);
-        background-color: var(--primary);
+    color: var(--light);
+    background-color: var(--primary);
     }
 
-    .navigation:hover {
-    opacity: 70%;
-    }
 
     .navigation.open {
-        display: flex !important; /* Show navigation when class 'open' is added */
-        flex-direction: column;
+    display: flex !important; /* Show navigation when class 'open' is added */
+    flex-direction: column;
     }
 }
 
@@ -59,5 +56,5 @@
 
 /* Hover effect for links */
 .navigation a:hover {
-    opacity: 0.5;
+    opacity: 0.4;
 }
