@@ -114,22 +114,33 @@ iframe.map {
 .blogposts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: var(--padding);
 }
 
 .blog-container {
   max-width: 90%;
   display: block;
-  background-color: var(--variant_of_black);
-  color: var(--light);
+  /* background-color: var(--variant_of_black); */
+  color: var(--black);
   border-radius: 30px 30px 0 0;
   justify-content: center;
+  padding: 3px;
 }
 
 .blog-container img {
   max-width: 100%;
   border-radius: 30px 30px 0 0;
-  border-bottom: solid var(--primary);
 }
+
+.blog-text {
+  background-color: var(--variant_of_black);
+  color: var(--light);
+  padding: var(--padding);
+  border-top: solid 5px var(--primary);
+}
+
+/* .blog-time {
+} */
 
 /* The loader is from www.... */
 .lds-spinner {

@@ -23,19 +23,34 @@ if (featuredMedia) {
     containerElement.appendChild(img);
     containerElement.appendChild(img);
 }
-    // Create and append the title element
-    const title = document.createElement("h3");
-    title.textContent = postData.title.rendered;
-    title.style.marginTop = "10px";
-    containerElement.appendChild(title);
 
-    // Create and append the text element
-    const text = document.createElement("span");
-    text.innerHTML = postData.excerpt.rendered;
-    containerElement.appendChild(text);
+// Create a container for the text elements
+const containerText = document.createElement("div");
+containerText.classList.add("blog-text");
 
-    // Append the container to the blog element
-    blogElement.appendChild(containerElement);
+// Create and append the title element
+const title = document.createElement("h3");
+title.textContent = postData.title.rendered;
+title.classList.add("blog-title");
+containerText.appendChild(title);
+
+// Create and append the text element
+const text = document.createElement("span");
+text.innerHTML = postData.excerpt.rendered;
+containerText.appendChild(text); // Append to containerText
+containerElement.appendChild(containerText);
+
+// Create and append date for blogposts
+const dateElement = document.createElement("time");
+const postDate = new Date(postData.date); 
+const options = { year: "numeric", month: "long", day: "numeric" };
+dateElement.textContent = postDate.toLocaleDateString("en-US", options);
+dateElement.classList.add("blog-time");
+containerText.appendChild(dateElement);
+
+// Append the container to the blog element
+blogElement.appendChild(containerElement); // Only append containerElement
+
 
     // Append the blog element to the main container
     mainElement.appendChild(blogElement);
