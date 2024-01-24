@@ -120,27 +120,32 @@ iframe.map {
 .blog-container {
   max-width: 90%;
   display: block;
-  /* background-color: var(--variant_of_black); */
+  background-color: var(--variant_of_black);
   color: var(--black);
-  border-radius: 30px 30px 0 0;
+  border-radius: 15px 15px 5px 5px;
   justify-content: center;
   padding: 3px;
+  margin: auto;
+  margin-bottom: var(--padding); 
 }
 
 .blog-container img {
   max-width: 100%;
-  border-radius: 30px 30px 0 0;
+  border-radius: 15px 15px 5px 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .blog-text {
-  background-color: var(--variant_of_black);
+  /* background-color: var(--variant_of_black); */
   color: var(--light);
   padding: var(--padding);
   border-top: solid 5px var(--primary);
 }
 
-/* .blog-time {
-} */
+.blog-time {
+  font-size: 0.8em; /* Slightly smaller font size */
+  margin-top: 10px; /* Space above the date/time */
+} 
 
 /* The loader is from www.... */
 .lds-spinner {
