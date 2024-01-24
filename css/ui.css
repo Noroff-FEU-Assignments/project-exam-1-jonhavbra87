@@ -125,7 +125,7 @@ iframe.map {
   border-radius: 15px 15px 5px 5px;
   justify-content: center;
   padding: 3px;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: var(--padding); 
 }
 

@@ -1,1 +1,50 @@
 /* @media (max-with: 40rem) */
+
+/* Hides the actual checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* Style for the hamburger icon */
+.menu-icon {
+    display: none; /* Initially hidden */
+    font-size: 30px; /* Size of the hamburger icon */
+    cursor: pointer;
+}
+
+/* Styles for the navigation menu */
+.navigation {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Change this to 'block' if you want a vertical menu */
+    /* Additional styling as needed */
+}
+
+@media screen and (max-width: 40rem) {
+    .menu-icon {
+        display: block; /* Show the icon */
+    }
+
+    /* Hide the menu initially */
+    .navigation {
+        display: none;
+    }
+
+    /* Show menu when checkbox is checked */
+    .menu-toggle:checked + .menu-icon + .navigation {
+        display: block; /* Change this to 'flex' if you prefer */
+    }
+}
+
+/* Style navigation links */
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+}
+
+/* Hover effect for links */
+.navigation a:hover {
+    background-color: #f4f4f4;
+}
