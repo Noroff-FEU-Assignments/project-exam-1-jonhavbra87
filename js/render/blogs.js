@@ -8,7 +8,7 @@ export function renderBlogs(postData) {
     
 
     // Container for the blog post
-    const containerElement = document.createElement("div");
+    const containerElement = document.createElement("section");
     blogElement.classList.add("blog-container");
     
 
@@ -55,7 +55,7 @@ blogElement.appendChild(containerElement); // Only append containerElement
     // Append the blog element to the main container
     mainElement.appendChild(blogElement);
     
-    
+/*     return containerElement; */
 }
 
 

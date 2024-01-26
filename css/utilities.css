@@ -29,3 +29,7 @@ footer {
   flex-wrap: wrap;
   flex-direction: column;
 }
+
+.justified-center {
+  justify-content: center;
+}

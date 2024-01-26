@@ -96,6 +96,42 @@ iframe.map {
   background: var(--alertbackground);
 }
 
+/* Carousel styling */
+.carousel {
+  position: relative;
+  height: 500px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel__track-container {
+  height: 100%;
+  background-color: var(--primary);
+  position: relative;
+  object-fit: cover;
+}
+
+.carousel__track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 500px;
+  height: 100%;
+}
+.carousel__track img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: var(--variant_of_black);
+}
+
+/* ----------------------------------------------------- */
 /* Blog posts */
 .blogposts {
   display: grid;
@@ -103,30 +139,26 @@ iframe.map {
   padding: var(--padding);
 }
 
-
-
-
 .blog-container {
   max-width: 90%;
   display: block;
   background-color: var(--variant_of_black);
   color: var(--black);
   border-radius: 15px 15px 8px 8px;
-  justify-content: center;
   padding: 3px;
   margin: 0 auto;
-  margin-bottom: var(--padding); 
+  margin-bottom: var(--padding);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .blog-container:hover {
-  transform: scale(1.04);
+  transform: scale(1.007);
   box-shadow: 0px 0px 15px var(--black);
   background-color: var(--primary);
 }
 
 .blog-container img {
-  max-width: 100%;
+  /* max-width: 100%; */
   border-radius: 15px 15px 5px 5px;
 }
 
@@ -139,12 +171,11 @@ iframe.map {
   border-top: solid 5px var(--primary);
 }
 
-
 .blog-time {
   font-size: 0.8em; /* Slightly smaller font size */
   margin-top: 10px; /* Space above the date/time */
   text-align: right;
-} 
+}
 
 /* The loader is from www.... */
 .lds-spinner {

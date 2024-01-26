@@ -1,5 +1,4 @@
 import { postsUrl } from "../api/constants.js";
-/* import { mediaUrl } from "../api/constants.js"; */
 
 
 export async function getBlogs() {

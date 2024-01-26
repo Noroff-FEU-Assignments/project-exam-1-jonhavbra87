@@ -1,15 +1,24 @@
 import { getBlogs } from "./api/getBlogs.js";
 import { renderBlogs } from "./render/blogs.js"
+import { renderCarousel } from "./render/carousel.js"
 import { initializeNavigation } from './ui/navigation.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
 });
 
-if (window.location.pathname === "/html/blog/index.html") {
+const path = window.location.pathname;
+
+if (path === "/html/blog/index.html") {
     getBlogs().then(posts => {
         posts.forEach(renderBlogs);
     })
+}
+
+if (path  === "/" || path === "/index.html") {
+    getBlogs().then(posts => {
+        renderCarousel(posts);
+    });
 }
 
 /* // Example of using async/await
