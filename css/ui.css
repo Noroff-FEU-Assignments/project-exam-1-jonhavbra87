@@ -34,7 +34,7 @@ header .navigation a {
 main {
   margin: 0 auto;
   width: 100%;
-  max-width: 60rem;
+  max-width: 65rem;
 }
 
 footer {
@@ -99,38 +99,51 @@ iframe.map {
 /* Blog posts */
 .blogposts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: var(--padding);
 }
+
+
+
 
 .blog-container {
   max-width: 90%;
   display: block;
   background-color: var(--variant_of_black);
   color: var(--black);
-  border-radius: 15px 15px 5px 5px;
+  border-radius: 15px 15px 8px 8px;
   justify-content: center;
   padding: 3px;
   margin: 0 auto;
   margin-bottom: var(--padding); 
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-container:hover {
+  transform: scale(1.04);
+  box-shadow: 0px 0px 15px var(--black);
+  background-color: var(--primary);
 }
 
 .blog-container img {
   max-width: 100%;
   border-radius: 15px 15px 5px 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .blog-text {
   /* background-color: var(--variant_of_black); */
   color: var(--light);
   padding: var(--padding);
+  margin-top: 0; /* Remove margin if any */
+  padding-top: 0; /* Remove padding if any */
   border-top: solid 5px var(--primary);
 }
+
 
 .blog-time {
   font-size: 0.8em; /* Slightly smaller font size */
   margin-top: 10px; /* Space above the date/time */
+  text-align: right;
 } 
 
 /* The loader is from www.... */
