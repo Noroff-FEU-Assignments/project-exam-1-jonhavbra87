@@ -1,6 +1,6 @@
 import { getBlogs } from "./api/getBlogs.js";
 import { renderBlogs } from "./render/blogs.js";
-import { renderBlog } from "./render/blogdetails.js";
+import { renderBlog } from "./render/detailedblog.js";
 import { initializeNavigation } from './ui/navigation.js';
 
 document.addEventListener('DOMContentLoaded', function() {

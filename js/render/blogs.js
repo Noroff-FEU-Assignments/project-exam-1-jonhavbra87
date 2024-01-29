@@ -1,75 +1,105 @@
-export function renderBlogs(postData, isCarousel = false) {
-
-    const mainElement = document.querySelector(isCarousel ? ".carousel" : ".blogposts");
-
-    if (!mainElement) {
-        console.error("Main element not found for the post: ", postData);
-        return; // Stop execution if mainElement is not found
+/* export function renderBlogs(postData, isCarousel = false) {
+    // Selecting the specific container based on whether it's a carousel or blogposts
+    const specificContainer = document.querySelector(isCarousel ? ".carousel .carousel__track-container" : ".blogposts");
+    if (!specificContainer) {
+        console.error("Specific container not found for the post: ", postData);
+        return;
     }
+
+    // Handling the list element
+    let listElement;
+    if (isCarousel) {
+        // For carousel, find or create the ul with class "carousel__track"
+        listElement = specificContainer.querySelector('.carousel__track') || document.createElement("ul");
+        listElement.classList.add("carousel__track");
+    } else {
+        // For blog posts, create a new div and ul each time
+        const blogContainer = document.createElement("div");
+        blogContainer.classList.add("blog-container");
+        listElement = document.createElement("ul");
+        listElement.classList.add("blog-posts");
+        blogContainer.appendChild(listElement);
+        specificContainer.appendChild(blogContainer);
+    } */
+
+    export function renderBlogs(postData, isCarousel = false) {
+        const trackContainer = document.querySelector(isCarousel ? ".carousel .carousel__track-container" : ".blogposts");
+        if (!trackContainer) {
+            console.error("Track container not found for the post: ", postData);
+            return;
+        }
     
-    // Blog element
-    const blogElement = document.createElement("div");
-    blogElement.classList.add(isCarousel ? "carousel__track-container" : "blog-container");
+        let listElement;
+        if (isCarousel) {
+            listElement = trackContainer.querySelector('.carousel__track');
+            if (!listElement) {
+                listElement = document.createElement("ul");
+                listElement.classList.add("carousel__track");
+                // Insert the carousel__track before the carousel__button--right
+                const rightButton = trackContainer.querySelector('.carousel__button--right');
+                trackContainer.insertBefore(listElement, rightButton);
+            }
+        } else {
+            const blogContainer = document.createElement("div");
+            blogContainer.classList.add("blog-container");
+            listElement = document.createElement("ul");
+            listElement.classList.add("blog-posts");
+            blogContainer.appendChild(listElement);
+            trackContainer.appendChild(blogContainer);
+        }
+    
+        // Creating and appending list item (li)
+        const listItem = document.createElement("li");
+        listItem.classList.add(isCarousel ? "carousel__slide" : "blog-post");
 
-    // Container for the blog post
-    const containerElement = document.createElement("div");
-
-
-    // Check if the post has a featured image and create an img element
+    // Adding the featured image if available
     const featuredMedia = postData._embedded?.['wp:featuredmedia']?.[0]?.source_url;
-
     if (featuredMedia) {
         const img = document.createElement("img");
         img.src = featuredMedia;
         img.alt = postData.title.rendered;
-        img.classList.add(isCarousel ? "carousel__track" : "blog-img");
-        containerElement.appendChild(img);
+        img.classList.add(isCarousel ? "carousel__image" : "blog-img");
+        listItem.appendChild(img);
     }
 
-    // Create a container for the text elements
-    const containerText = document.createElement("div");
-      containerText.classList.add(isCarousel ? "carousel__slide" : "blog-text");
+    // Creating a container for text elements
+    const textContainer = document.createElement("div");
 
-    // Create and append the title element
+    // Adding the title
     const title = document.createElement("h3");
     title.textContent = postData.title.rendered;
     title.classList.add("blog-title");
-    containerText.appendChild(title);
+    textContainer.appendChild(title);
 
-    // Create and append the text element
+    // Adding the text excerpt
     const text = document.createElement("span");
     text.innerHTML = postData.excerpt.rendered;
-    containerText.appendChild(text); // Append to containerText
-    containerElement.appendChild(containerText);
+    textContainer.appendChild(text);
 
-    // Create and append date for blogposts
+    // Adding the date for blog posts
     const dateElement = document.createElement("time");
     const postDate = new Date(postData.date);
-    const options = { year: "numeric", month: "long", day: "numeric" };
-    dateElement.textContent = postDate.toLocaleDateString("en-US", options);
-    dateElement.classList.add("blog-time");
-    containerText.appendChild(dateElement);
+    dateElement.textContent = postDate.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+    dateElement.classList.add("blog-date");
+    textContainer.appendChild(dateElement);
 
-
-    // button element
+    // Adding a button
     const buttonElement = document.createElement("a");
     buttonElement.href = "/blogdetails/?id=" + postData.id;
-    buttonElement.dataset.id = postData.id;
+    buttonElement.textContent = "Read More";
     buttonElement.classList.add("blog-button");
-    buttonElement.textContent = "Les mer";
-    containerText.appendChild(buttonElement);
+    textContainer.appendChild(buttonElement);
 
-    // Append the container to the blog element
-    blogElement.appendChild(containerElement);
+    // Appending the text container to the list item
+    listItem.appendChild(textContainer);
 
-    console.log("mainElement: ", mainElement);
-    if(mainElement) {
-        mainElement.appendChild(blogElement);
-    } else {
-        console.error("mainElement not found");
+    // Appending the list item to the ul element
+    listElement.appendChild(listItem);
+
+    // For carousel, append the ul element to the container only if it's newly created
+    if (isCarousel && !specificContainer.querySelector('.carousel__track')) {
+        specificContainer.appendChild(listElement);
     }
-
-    
 }
 
 
