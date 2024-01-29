@@ -47,7 +47,7 @@ export function renderCarousel(cards) {
         // Append the slide to the UL container
         ulContainer.appendChild(slideElement);
     });
-
+console.log(cards);
     // Append the UL container to the track container
     trackContainer.appendChild(ulContainer);
 }

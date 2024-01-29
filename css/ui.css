@@ -96,42 +96,6 @@ iframe.map {
   background: var(--alertbackground);
 }
 
-/* Carousel styling */
-.carousel {
-  position: relative;
-  height: 500px;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.carousel__track-container {
-  height: 100%;
-  background-color: var(--primary);
-  position: relative;
-  object-fit: cover;
-}
-
-.carousel__track {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  width: 500px;
-  height: 100%;
-}
-.carousel__track img {
-  object-fit: cover;
-  width: 100%;
-}
-
-.carousel__slide {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-  background-color: var(--variant_of_black);
-}
-
-/* ----------------------------------------------------- */
 /* Blog posts */
 .blogposts {
   display: grid;
