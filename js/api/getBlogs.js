@@ -10,7 +10,6 @@ export async function getBlogs() {
     throw new Error("Request failed!")
     }
 
-
 /* export async function getMedia() {
     const response = await fetch(mediaUrl);
     

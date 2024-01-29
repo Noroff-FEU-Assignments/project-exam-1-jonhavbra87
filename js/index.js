@@ -1,6 +1,6 @@
 import { getBlogs } from "./api/getBlogs.js";
-import { renderBlogs } from "./render/blogs.js"
-import { renderCarousel } from "./render/carousel.js"
+import { renderBlogs } from "./render/blogs.js";
+import { renderBlog } from "./render/blogdetails.js";
 import { initializeNavigation } from './ui/navigation.js';
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -11,16 +11,46 @@ const path = window.location.pathname;
 
 if (path === "/html/blog/index.html") {
     getBlogs().then(posts => {
-        posts.forEach(renderBlogs);
-    })
+        posts.forEach(post => {
+            try {
+                renderBlogs(post, false); 
+            } catch (error) {
+                console.error("Error rendering post:", post, error);
+            }
+        });
+        console.log(posts);
+    }).catch(error => {
+        console.error("Error fetching blogs: ", error);
+    });
 }
+if (path === "/html/blogdetails/index.html") {
+        getBlog(posts).then(post => {
+            try {
+                renderBlog(post);
+            } catch (error) {
+                console.error("Error rendering post:", post, error);
+            }
+        }).catch(error => {
+            console.error("Error fetching blog: ", error);
+        });
+ 
+}
+
+
 
 if (path  === "/" || path === "/index.html") {
     getBlogs().then(posts => {
-        renderCarousel(posts);
+        posts.forEach(post => renderBlogs(post, true));
+        console.log(posts);
     });
 }
 
+
+/*     document.addEventListener('DOMContentLoaded', function() {
+        console.log(document.querySelector(".carousel"));
+        console.log(document.querySelector(".blogposts"));
+        // ... rest of your code
+    }); */
 /* // Example of using async/await
 async function loadContent() {
     try {

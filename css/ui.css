@@ -105,7 +105,7 @@ iframe.map {
 
 .blog-container {
   max-width: 90%;
-  display: block;
+  display: flex;
   background-color: var(--variant_of_black);
   color: var(--black);
   border-radius: 15px 15px 8px 8px;
@@ -115,24 +115,20 @@ iframe.map {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.blog-container:hover {
-  transform: scale(1.007);
-  box-shadow: 0px 0px 15px var(--black);
-  background-color: var(--primary);
-}
-
-.blog-container img {
-  /* max-width: 100%; */
+.blog-img {
+  max-width: 100%;
   border-radius: 15px 15px 5px 5px;
 }
 
 .blog-text {
-  /* background-color: var(--variant_of_black); */
+  display: flex;
+  flex-direction: column;
   color: var(--light);
   padding: var(--padding);
   margin-top: 0; /* Remove margin if any */
   padding-top: 0; /* Remove padding if any */
   border-top: solid 5px var(--primary);
+  font-size: 1.2rem;
 }
 
 .blog-time {
@@ -141,6 +137,25 @@ iframe.map {
   text-align: right;
 }
 
+.blog-button {
+  width: 20%;
+  background-color: var(--light);
+  color: var(--variant_of_black);
+  display: block;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+}
+
+.blog-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px var(--light);
+  /*   background-color: var(--variant_of_black);
+  color: var(--light); */
+}
 /* The loader is from www.... */
 .lds-spinner {
   color: var(--primary);

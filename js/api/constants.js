@@ -4,7 +4,7 @@ const postEndpoint = "/wp-json/wp/v2/posts?_embed";
 // Correctly combine the host and endpoint
 export const postsUrl = new URL(postEndpoint, host);
 
-console.log(postsUrl);
+/* console.log(postsUrl); */
 
 
 
