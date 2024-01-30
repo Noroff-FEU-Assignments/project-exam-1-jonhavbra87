@@ -96,10 +96,12 @@
     // Appending the list item to the ul element
     listElement.appendChild(listItem);
 
+    
     // For carousel, append the ul element to the container only if it's newly created
-    if (isCarousel && !specificContainer.querySelector('.carousel__track')) {
+/*     if (isCarousel && !specificContainer.querySelector('.carousel__track')) {
         specificContainer.appendChild(listElement);
-    }
+    } */
+
 }
 
 

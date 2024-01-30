@@ -6,9 +6,11 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   background-color: var(--variant_of_black);
-} 
+}  */
 
-.carousel-card {
+/* .carousel-card {
+  display: flex;
+  overflow-x: auto;
   flex: 0 0 auto;
   width: 300px;
   margin-right: 20px;
@@ -19,9 +21,10 @@
 
 .carousel {
   position: relative;
-  height: 600px;
+  height: 100%;
   width: 80%;
   margin: 0 auto;
+  display: block;
 }
 
 .carousel__track-container {
@@ -29,6 +32,8 @@
   height: 100%;
   position: relative;
   color: var(--light);
+  border-radius: 15px 15px 8px 8px;
+  padding: 3px;
 }
 
 .carousel__track {
@@ -43,6 +48,7 @@
 .carousel__track img {
   object-fit: cover;
   width: 100%;
+  border-radius: 15px 15px 8px 8px;
 }
 
 .carousel__slide {
@@ -51,6 +57,7 @@
   bottom: 0;
   width: 100%;
 }
+
 
 .carousel__button {
   position: absolute;
