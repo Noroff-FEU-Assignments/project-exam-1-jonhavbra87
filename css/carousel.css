@@ -28,17 +28,17 @@
 }
 
 .carousel__track-container {
-  background-color: var(--variant_of_black);
   height: 100%;
   position: relative;
   color: var(--light);
   border-radius: 15px 15px 8px 8px;
   padding: 3px;
+  /*   background-color: var(--variant_of_black); */
 }
 
 .carousel__track {
   padding: 0;
-  margin: 0;
+  margin: 20px;
   list-style: none;
   position: relative;
   height: 100%;
@@ -46,18 +46,26 @@
 }
 
 .carousel__track img {
-  object-fit: cover;
+  /*   object-fit: cover; */
   width: 100%;
   border-radius: 15px 15px 8px 8px;
 }
 
+
 .carousel__slide {
+  display: none;
+
+}
+
+.carousel__slide {
+  display: block;
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
+  background-color: var(--variant_of_black);
+  border-radius: 15px 15px 8px 8px;
 }
-
 .carousel__button {
   position: absolute;
   top: 50%;
@@ -65,6 +73,7 @@
   background: white;
   border: 0;
   cursor: pointer;
+  z-index: 2;
 }
 
 .carousel__button--left {
@@ -76,13 +85,14 @@
 }
 
 .carousel__button img {
-  width: 12px;
+  width: 50px;
 }
 
 .carousel__nav {
   display: flex;
   justify-content: center;
   padding: 10px 0;
+  z-index: 3;
 }
 
 .carousel__indicator {

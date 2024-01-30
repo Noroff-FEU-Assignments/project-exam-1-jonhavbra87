@@ -9,11 +9,12 @@ export function initializeCarousel() {
     const prevButton = document.querySelector(".carousel__button--left");
     const dotsNav = document.querySelector(".carousel__nav");
     const dots = Array.from(dotsNav.children);
-   // Set the first slide as the current slide
+   
+    // Set the first slide as the current slide
     if (slides.length > 0) {
         slides[0].classList.add("current-slide");
     }
-    console.log(slides);
+
 
     if (dots.length > 0) {
         dots[0].classList.add("current-slide"); // Ensure this class name matches your CSS for active dots
@@ -21,7 +22,6 @@ export function initializeCarousel() {
 
     const slideWidth = slides[0].getBoundingClientRect().width;
     console.log(slideWidth);
-
 
     // Arrange the slides next to one another
     const setSlidePosition = (slide, index) => {
