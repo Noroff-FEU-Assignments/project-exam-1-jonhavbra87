@@ -1,15 +1,4 @@
-/* export async function homePage() {
-
-    const homeContent = document.querySelector(".content");
-
-    if (homeContent) {
-      homeContent.innerHTML = `
+import { renderCarousel } from "../render/carousel.js";
 
 
-                           `;
-} else {
-    //This console error is for developers:
-      console.error('homeContent not found in the HTML');
-  }
-}
- */
+renderCarousel();

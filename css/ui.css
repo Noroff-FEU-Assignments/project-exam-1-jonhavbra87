@@ -39,8 +39,6 @@ main {
 }
 
 footer {
-  
-  
   align-items: center;
   justify-content: center;
   height: 200px;
@@ -100,48 +98,52 @@ iframe.map {
 }
 
 /* Blog posts */
-.blogposts {
+.blog-posts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-rows: auto; */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   padding: var(--padding);
+  width: 100%;
 }
 
-.blog-container {
-  max-width: 90%;
+.blog-post-container {
+  max-width: 100%;
   display: flex;
   background-color: var(--variant_of_black);
-  color: var(--black);
-  border-radius: 15px 15px 8px 8px;
+  border-radius: 12px;
   padding: 3px;
   margin: 0 auto;
   margin-bottom: var(--padding);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.blog-img {
-  max-width: 100%;
-  border-radius: 15px 15px 5px 5px;
+.blog-post-image {
+  width: 300px;
+  border-radius: 12px 0 0 12px;
+  object-fit: cover;
 }
 
-.text-container {
+.blog-post-text-container {
   display: flex;
   flex-direction: column;
   color: var(--light);
   padding: var(--padding);
-  margin-top: 0; /* Remove margin if any */
-  padding-top: 0; /* Remove padding if any */
-  border-top: solid 5px var(--primary);
+  border-left: solid 5px var(--primary);
   font-size: 1.2rem;
 }
 
-.blog-date {
-  font-size: 0.8em; /* Slightly smaller font size */
-  margin-top: 10px; /* Space above the date/time */
+.blog-post-preamble {
+  font-size: 1.3rem;
+}
+
+.blog-post-date {
+  font-size: 0.9rem;
+  margin-top: 10px;
   text-align: right;
 }
 
-.blog-button {
-  width: 20%;
+.blog-post-button {
+  width: 80%;
   background-color: var(--light);
   color: var(--variant_of_black);
   display: block;
@@ -149,16 +151,47 @@ iframe.map {
   padding: 1rem 2rem;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
-  font-weight: 400;
+  text-align: center;
+  font-weight: 500;
 }
 
-.blog-button:hover {
+.blog-post-button:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 15px var(--light);
   /*   background-color: var(--variant_of_black);
   color: var(--light); */
 }
+
+@media screen and (max-width: 600px) {
+  .blog-post-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .blog-post-image {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .blog-post-text-container {
+    border-top: solid 5px var(--primary);
+    border-left: none;
+    font-size: 1rem;
+  }
+
+  .blog-post-date {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .blog-post-button {
+    width: 50%;
+    font-weight: 500;
+    margin: 0 auto;
+  }
+}
+
 /* The loader is from www.... */
 .lds-spinner {
   color: var(--primary);

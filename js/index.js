@@ -1,8 +1,11 @@
-import { getBlogs } from "./api/getBlogs.js";
-import { renderBlogs } from "./render/blogs.js";
-import { renderBlog } from "./render/detailedblog.js";
-/* import { initializeNavigation } from "./ui/navigation.js"; */
-import { initializeCarousel } from "./pages/carousel.js"
+import { router } from "./router/router.js";
+import { initializeNavigation } from "../js/ui/navigation.js";
+
+router();
+initializeNavigation();
+
+
+
 /* 
 document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
@@ -19,42 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-const path = window.location.pathname;
 
-
-if (path === "/" || path === "/index.html") {
-    getBlogs().then(posts => {
-        posts.forEach(post => renderBlogs(post, true));
-        initializeCarousel();
-    });
-}
-
-if (path === "/html/blog/index.html") {
-    getBlogs().then(posts => {
-        posts.forEach(post => {
-            try {
-                renderBlogs(post, false); 
-            } catch (error) {
-                console.error("Error rendering post:", post, error);
-            }
-        });
-        console.log(posts);
-    }).catch(error => {
-        console.error("Error fetching blogs: ", error);
-    });
-}
-
-if (path === "/html/blogdetails/index.html") {
-        getBlog(posts).then(post => {
-            try {
-                renderBlog(post);
-            } catch (error) {
-                console.error("Error rendering post:", post, error);
-            }
-        }).catch(error => {
-            console.error("Error fetching blog: ", error);
-        });
-}
 
 
 /* async function loadBlogContent() {
