@@ -103,8 +103,9 @@ iframe.map {
   display: grid;
   /* grid-template-rows: auto; */
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  padding: var(--padding);
+  /*  padding: var(--padding); */
   width: 100%;
+  grid-gap: 30px;
 }
 
 .blog-post-container,
