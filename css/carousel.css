@@ -114,17 +114,7 @@
   cursor: pointer;
 }
 
-.carousel__button--left {
-  left: -40px;
-}
 
-.carousel__button--right {
-  right: -40px;
-}
-
-.carousel__button img {
-  width: 50px;
-}
 
 .carousel__nav {
   display: flex;
@@ -154,3 +144,14 @@
 /* ----------------------------------------------------- */
 
 /* easier to use rbg to add transperant color */
+.carousel__button--left {
+  left: -40px;
+}
+
+.carousel__button--right {
+  right: -40px;
+}
+
+.carousel__button img {
+  width: 50px;
+}

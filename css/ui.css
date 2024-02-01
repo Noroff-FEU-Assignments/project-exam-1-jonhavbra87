@@ -98,7 +98,8 @@ iframe.map {
 }
 
 /* Blog posts */
-.blog-posts {
+.blog-posts,
+.carousel {
   display: grid;
   /* grid-template-rows: auto; */
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -106,7 +107,8 @@ iframe.map {
   width: 100%;
 }
 
-.blog-post-container {
+.blog-post-container,
+.carousel-container {
   max-width: 100%;
   display: flex;
   background-color: var(--variant_of_black);
