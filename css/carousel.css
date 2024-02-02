@@ -144,6 +144,59 @@
 /* ----------------------------------------------------- */
 
 /* easier to use rbg to add transperant color */
+
+/* new styling */
+.carousel {
+  /* position: relative; */
+  height: 800px;
+  width: 80%;
+  margin: 0 auto;
+  display: block; 
+  overflow: hidden;
+} 
+
+.carousel-track-container {
+  width: 100%;
+  /* height: 100%;
+  position: relative;
+  color: var(--light);
+  border-radius: 15px 15px 8px 8px;
+  padding: 3px; */
+/*   background-color: var(--variant_of_black); */
+}
+
+.carousel-track-container img {
+
+}
+.carousel-track {
+  /* padding: 0;
+  margin: 20px;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem; */
+
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s; */
+}
+
+
+.carousel-slide {
+  /* display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--variant_of_black);
+  border-radius: 15px 15px 8px 8px; */
+}
+
 .carousel__button--left {
   left: -40px;
 }
