@@ -45,8 +45,9 @@ const slider = function () {
   
       goToSlide(curSlide);
       activateDot(curSlide);
+      console.log("prev slide is clicked", curSlide);
     };
-  
+  //Previous slide
     const prevSlide = function () {
       if (curSlide === 0) {
         curSlide = maxSlide - 1;
@@ -60,13 +61,33 @@ const slider = function () {
     const init = function () {
       goToSlide(0);
       createDots();
-  
       activateDot(0);
+
+      // Event handlers
+      btnRight.addEventListener('click', nextSlide);
+      btnLeft.addEventListener('click', prevSlide);
+      
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+      });
+
+      dotContainer.addEventListener('click', function (e) {
+        if (e.target.classList.contains('dots__dot')) {
+          const { slide } = e.target.dataset;
+          goToSlide(slide);
+          activateDot(slide);
+          
+        }
+      });
     };
+
+ 
     init();
-  
     }
-}
+slider();
+};
 
 
 
