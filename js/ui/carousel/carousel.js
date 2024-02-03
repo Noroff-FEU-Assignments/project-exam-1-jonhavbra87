@@ -11,6 +11,9 @@ const slider = function () {
   
     // Functions
     const createDots = function () {
+
+      dotContainer.innerHTML = '';
+
       slides.forEach(function (_, i) {
         dotContainer.insertAdjacentHTML(
           'beforeend',
@@ -83,7 +86,6 @@ const slider = function () {
       });
     };
 
- 
     init();
     }
 slider();

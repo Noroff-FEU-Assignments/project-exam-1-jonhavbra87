@@ -19,7 +19,7 @@ export function renderCarousel(postData) {
         img.src = featuredMedia;
         img.alt = postData.title.rendered;
         img.classList.add("carousel-image");
-        postContainer.append(img); // Appending to the list item
+        innerContainer.append(img); // Appending to the list item
     }
 
     // Adding the title
