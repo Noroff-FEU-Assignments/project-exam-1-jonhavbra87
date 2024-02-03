@@ -9,6 +9,8 @@ export function renderCarousel(postData) {
     const postContainer = document.createElement("div");
     postContainer.classList.add("slide");
 
+    const innerContainer = document.createElement("div");
+    innerContainer.classList.add("inner-container");
 
     // Adding the featured image if available
     const featuredMedia = postData._embedded?.['wp:featuredmedia']?.[0]?.source_url;
@@ -24,17 +26,19 @@ export function renderCarousel(postData) {
     const title = document.createElement("h3");
     title.textContent = postData.title.rendered;
     title.classList.add("carousel-title");
-    postContainer.append(title); // Appending to the list item
+   //postContainer.append(title); 
 
     // Adding a read more button (anchortag)
     const readMoreButton = document.createElement("a");
     readMoreButton.href = "/blogdetails/?id=" + postData.id;
     readMoreButton.textContent = "Read More";
     readMoreButton.classList.add("carousel-button");
-    postContainer.append(readMoreButton); // Appending to the list item
+    // postContainer.append(readMoreButton); 
 
+    innerContainer.append(title);
+    innerContainer.append(readMoreButton);
 
-
+    postContainer.append(innerContainer);
     // Appending the blog post container (ul element) to the main blog container
     blogContainer.append(postContainer);
 }
