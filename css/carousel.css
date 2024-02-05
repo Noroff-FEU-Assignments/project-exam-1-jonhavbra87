@@ -36,7 +36,7 @@
   object-fit: cover;
   object-position: center;
   bottom: 0;
-  border-bottom: solid var(--primary);
+  border-bottom: solid var(--red);
 }
 
 .carousel-text-container {
@@ -74,7 +74,7 @@
   /* left: 50%; */
   /* transform: translateX(-50%); */
   color: var(--light);
-  background-color: var(--secondary);
+  background-color: var(--cherry-red);
   border: solid;
   border-radius: 10px;
   font-size: 1.2rem;
@@ -89,9 +89,11 @@
   z-index: 10;
   border: none;
   background: rgba(255, 255, 255, 0.5);
+  /* background: transparent; */
+  box-shadow: 100px rgba(255, 255, 255, 0.5);
   font-family: inherit;
   color: var(--variant_of_black);
-  border-radius: 50%;
+  border-radius: 30%;
   height: 6rem;
   width: 6rem;
   cursor: pointer;
@@ -135,13 +137,13 @@
 
 .dots__dot--active {
   /* background-color: #fff; */
-  background-color: var(--secondary);
+  background-color: var(--cherry-red);
   opacity: 1;
 }
 
 /* .btn {
   display: inline-block;
-  background-color: var(--color-primary);
+  background-color: var(--color-red);
   font-size: 1.6rem;
   font-family: inherit;
   font-weight: 500;
@@ -153,7 +155,7 @@
 }
 
 .btn:hover {
-  background-color: var(--color-primary-darker);
+  background-color: var(--color-red-darker);
 } */
 
 /* .btn--text {
@@ -162,7 +164,7 @@
   font-size: 1.7rem;
   font-family: inherit;
   font-weight: 500;
-  color: var(--color-primary);
+  color: var(--color-red);
   border: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;

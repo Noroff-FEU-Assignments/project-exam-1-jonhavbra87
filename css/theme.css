@@ -1,8 +1,8 @@
 /* colors, fonts soft touches, Typography */
 :root {
   --padding: 1rem;
-  --primary: #cd0010;
-  --secondary: #800000;
+  --red: #cd0010;
+  --cherry-red: #800000;
   --black: #000000;
   --light: #ffffff;
   --variant_of_black: #181414;
@@ -12,7 +12,7 @@
 *:before,
 *:after {
   box-sizing: inherit;
-  /* color: var(--primary); */
+  /* color: var(--red); */
   text-decoration: none;
 }
 

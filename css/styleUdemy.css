@@ -1,17 +1,17 @@
 /* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
 
 :root {
-  --color-primary: #5ec576;
-  --color-secondary: #ffcb03;
+  --color-red: #5ec576;
+  --color-cherry-red: #ffcb03;
   --color-tertiary: #ff585f;
-  --color-primary-darker: #4bbb7d;
-  --color-secondary-darker: #ffbb00;
+  --color-red-darker: #4bbb7d;
+  --color-cherry-red-darker: #ffbb00;
   --color-tertiary-darker: #fd424b;
-  --color-primary-opacity: #5ec5763a;
-  --color-secondary-opacity: #ffcd0331;
+  --color-red-opacity: #5ec5763a;
+  --color-cherry-red-opacity: #ffcd0331;
   --color-tertiary-opacity: #ff58602d;
-  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
-  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  --gradient-red: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-cherry-red: linear-gradient(to top left, #ffb003, #ffcb03);
 }
 
 * {
@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   color: #444;
   line-height: 1.9;
@@ -55,7 +55,7 @@ body {
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: var(--color-primary);
+  color: var(--color-red);
   margin-bottom: 1rem;
 }
 
@@ -67,7 +67,7 @@ body {
 
 .btn {
   display: inline-block;
-  background-color: var(--color-primary);
+  background-color: var(--color-red);
   font-size: 1.6rem;
   font-family: inherit;
   font-weight: 500;
@@ -79,7 +79,7 @@ body {
 }
 
 .btn:hover {
-  background-color: var(--color-primary-darker);
+  background-color: var(--color-red-darker);
 }
 
 .btn--text {
@@ -88,7 +88,7 @@ body {
   font-size: 1.7rem;
   font-family: inherit;
   font-weight: 500;
-  color: var(--color-primary);
+  color: var(--color-red);
   border: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
@@ -159,14 +159,14 @@ img {
 .nav__link--btn:visited {
   padding: 0.8rem 2.5rem;
   border-radius: 3rem;
-  background-color: var(--color-primary);
+  background-color: var(--color-red);
   color: #222;
 }
 
 .nav__link--btn:hover,
 .nav__link--btn:active {
   color: inherit;
-  background-color: var(--color-primary-darker);
+  background-color: var(--color-red-darker);
   color: #333;
 }
 
@@ -216,7 +216,7 @@ h4 {
 
 .highlight::after {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -225,7 +225,7 @@ h4 {
   z-index: -1;
   opacity: 0.7;
   transform: scale(1.07, 1.05) skewX(-15deg);
-  background-image: var(--gradient-primary);
+  background-image: var(--gradient-red);
 }
 
 /* FEATURES */
@@ -251,7 +251,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-primary-opacity);
+  background-color: var(--color-red-opacity);
   height: 5.5rem;
   width: 5.5rem;
   border-radius: 50%;
@@ -261,7 +261,7 @@ h4 {
 .features__icon svg {
   height: 2.5rem;
   width: 2.5rem;
-  fill: var(--color-primary);
+  fill: var(--color-red);
 }
 
 .features__header {
@@ -294,11 +294,11 @@ h4 {
 }
 
 .operations__tab--1 {
-  background-color: var(--color-secondary);
+  background-color: var(--color-cherry-red);
 }
 
 .operations__tab--1:hover {
-  background-color: var(--color-secondary-darker);
+  background-color: var(--color-cherry-red-darker);
 }
 
 .operations__tab--3 {
@@ -354,19 +354,19 @@ h4 {
 }
 
 .operations__icon--1 {
-  background-color: var(--color-secondary-opacity);
+  background-color: var(--color-cherry-red-opacity);
 }
 .operations__icon--2 {
-  background-color: var(--color-primary-opacity);
+  background-color: var(--color-red-opacity);
 }
 .operations__icon--3 {
   background-color: var(--color-tertiary-opacity);
 }
 .operations__icon--1 svg {
-  fill: var(--color-secondary-darker);
+  fill: var(--color-cherry-red-darker);
 }
 .operations__icon--2 svg {
-  fill: var(--color-primary);
+  fill: var(--color-red);
 }
 .operations__icon--3 svg {
   fill: var(--color-tertiary);
@@ -470,14 +470,14 @@ h4 {
 }
 
 .testimonial::before {
-  content: '\201C';
+  content: "\201C";
   position: absolute;
   top: -5.7rem;
   left: -6.8rem;
   line-height: 1;
   font-size: 20rem;
   font-family: inherit;
-  color: var(--color-primary);
+  color: var(--color-red);
   z-index: -1;
 }
 

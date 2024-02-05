@@ -1,4 +1,8 @@
+const loader = document.querySelector(".lds-spinner");
+
 export function renderCarousel(postData) {
+    loader.innerHTML = "";
+    
     const blogContainer = document.querySelector(".slider");
     if (!blogContainer) {
         console.error("Blog container not found for the post: ", postData);

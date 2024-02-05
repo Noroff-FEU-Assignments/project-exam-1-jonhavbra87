@@ -352,7 +352,7 @@ console.log(getComputedStyle(message).height);
 message.style.height =
   Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
 
-document.documentElement.style.setProperty('--color-primary', 'orangered');
+document.documentElement.style.setProperty('--color-red', 'orangered');
 
 // Attributes
 const logo = document.querySelector('.nav__logo');
@@ -445,9 +445,9 @@ h1.lastElementChild.style.color = 'orangered';
 console.log(h1.parentNode);
 console.log(h1.parentElement);
 
-h1.closest('.header').style.background = 'var(--gradient-secondary)';
+h1.closest('.header').style.background = 'var(--gradient-cherry-red)';
 
-h1.closest('h1').style.background = 'var(--gradient-primary)';
+h1.closest('h1').style.background = 'var(--gradient-red)';
 
 // Going sideways: siblings
 console.log(h1.previousElementSibling);

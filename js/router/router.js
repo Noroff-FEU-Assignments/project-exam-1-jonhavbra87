@@ -6,9 +6,13 @@ import { blogSpecificPage } from "../pages/blogspecific.js";
 export async function router() {
     switch (window.location.pathname) {
         case "/blogs/":
+        case "/blogs":
+        case "/blogs/index.html":
             blogsPage();
     break;
         case "/blogdetails/":
+        case "/blogdetails":
+        case "/blogdetails/index.html":
             blogSpecificPage();
     break;
         case "/":

@@ -1,4 +1,8 @@
+const loader = document.querySelector(".lds-spinner");
+
 export function renderBlog(specificData) {
+	loader.innerHTML = "";
+
 	// Selecting the container for blog posts
 	const blogContainer = document.querySelector(".blog-details");
 	if (!blogContainer) {
@@ -7,7 +11,7 @@ export function renderBlog(specificData) {
 	}
 	// Creating the container for each blog post
 	const postContainer = document.createElement("div");
-	postContainer.classList.add("blog-post-container");
+	postContainer.classList.add("blog-post-specific");
 
 	// Adding the featured image if available
 	const featuredMedia =
@@ -32,7 +36,6 @@ export function renderBlog(specificData) {
 
 	// Adding the text content
 	const content = document.createElement("div");
-	// content.textContent = specificData.content.rendered;
 	content.innerHTML = specificData.content.rendered;
 	content.classList.add("blog-post-preamble");
 	textContainer.append(content);
@@ -54,7 +57,7 @@ export function renderBlog(specificData) {
 	// Appending the blog post container to the main blog container
 	blogContainer.append(postContainer);
 
-	document.title = `KIL HÃ¥ndball | ${specificData.title}`;
+	document.title = `KIL | ${specificData.title.rendered}`;
 }
 
 // export function renderBlog(specificData) {

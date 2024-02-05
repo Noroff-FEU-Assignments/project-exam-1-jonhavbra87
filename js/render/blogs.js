@@ -1,4 +1,8 @@
+const loader = document.querySelector(".lds-spinner");
+
 export function renderBlogs(postData) {
+    loader.innerHTML = "";
+    
     // Selecting the container for blog posts
     const blogContainer = document.querySelector(".blog-posts");
     if (!blogContainer) {

@@ -6,7 +6,7 @@ footer {
 }
 
 header {
-  background-color: var(--primary);
+  background-color: var(--red);
   text-transform: uppercase;
   height: 100px;
   width: 100%;
@@ -18,30 +18,42 @@ header img {
   height: 80%;
 }
 
-/* Navigation
-header .navigation {
+/* Style for the navigation menu */
+.navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: var(--padding);
 }
-header .navigation a {
+
+/* Style navigation links */
+.navigation a {
   text-decoration: none;
   color: var(--light);
+  padding: 10px;
+  display: block;
 }
- */
+
+/* Hover effect for links */
+.navigation a:hover {
+  opacity: 0.4;
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default on larger screens */
+}
 
 main {
   margin: 0 auto;
   width: 100%;
-  max-width: 65rem;
-  margin-bottom: 3000px;
+  max-width: 85rem;
+  margin-bottom: 0;
 }
 
 footer {
   align-items: center;
   justify-content: center;
-  height: 200px;
+  height: 300px;
   background-color: var(--variant_of_black);
   color: var(--light);
 }
@@ -54,7 +66,6 @@ h3 {
   text-transform: uppercase;
 }
 
-/* Hjemmside velkommen: sjekk ut youtube om outbreak kan passe her */
 .hero {
   position: relative;
   width: 100vw; /* Set width relative to the viewport width */
@@ -75,8 +86,7 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%); /* Adjust for precise centering */
   color: var(--light);
-  text-shadow: 0px 0px 8px #000000; /* Optional text shadow for readability */
-  /* Add any other styles for your text */
+  text-shadow: 0px 0px 8px #000000;
 }
 
 iframe {
@@ -102,38 +112,53 @@ iframe.map {
 .blog-details {
   display: grid;
   /* grid-template-rows: auto; */
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   /*  padding: var(--padding); */
-  width: 100%;
+  /* width: 100%; */
   grid-gap: 30px;
 }
 
+.blog-post-specific,
 .blog-post-container {
-  max-width: 100%;
   display: flex;
   background-color: var(--variant_of_black);
   border-radius: 12px;
   padding: 3px;
   margin: 0 auto;
   margin-bottom: var(--padding);
-  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-post-container {
+  max-width: 40rem;
+}
+
+.blog-post-container:hover {
+  box-shadow: 0px 0px 10px var(--cherry-red);
 }
 
 .blog-post-image {
-  width: 300px;
+  width: 15rem;
   border-radius: 12px 0 0 12px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
+.blog-post-specific,
 .blog-post-text-container {
   display: flex;
   flex-direction: column;
   color: var(--light);
   padding: var(--padding);
-  border-left: solid 5px var(--primary);
+  border-left: solid 5px var(--red);
   font-size: 1.2rem;
 }
-
+.blog-post-specific {
+  max-width: 80rem;
+  border-left: none;
+}
+.blog-post-specific img {
+  width: 80%;
+  margin: 0 auto;
+}
 .blog-post-preamble {
   font-size: 1.3rem;
 }
@@ -166,43 +191,14 @@ iframe.map {
   color: var(--light); */
 }
 
-@media screen and (max-width: 600px) {
-  .blog-post-container {
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 90%;
-  }
-
-  .blog-post-image {
-    width: 100%;
-    border-radius: 12px 12px 0 0;
-  }
-
-  .blog-post-text-container {
-    border-top: solid 5px var(--primary);
-    border-left: none;
-    font-size: 1rem;
-  }
-
-  .blog-post-date {
-    text-align: left;
-    margin-bottom: 10px;
-  }
-
-  .blog-post-button {
-    width: 50%;
-    font-weight: 500;
-    margin: 0 auto;
-  }
-}
-
 /* The loader is from www.... */
 .lds-spinner {
-  color: var(--primary);
+  color: var(--red);
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
+  left: 50%;
 }
 .lds-spinner div {
   transform-origin: 40px 40px;
@@ -217,7 +213,7 @@ iframe.map {
   width: 6px;
   height: 18px;
   border-radius: 20%;
-  background: var(--primary);
+  background: var(--red);
 }
 .lds-spinner div:nth-child(1) {
   transform: rotate(0deg);
