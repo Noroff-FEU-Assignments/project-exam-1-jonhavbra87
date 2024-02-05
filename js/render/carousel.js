@@ -37,7 +37,8 @@ export function renderCarousel(postData) {
     readMoreButton.classList.add("carousel-button");
     // postContainer.append(readMoreButton); 
 
-    textContainer.append(title, readMoreButton);
+    textContainer.append(title);
+    textContainer.append(readMoreButton);
 
 
     innerContainer.append(textContainer);
