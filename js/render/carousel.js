@@ -13,14 +13,16 @@ export function renderCarousel(postData) {
     innerContainer.classList.add("inner-container");
 
     // Adding the featured image if available
-    const featuredMedia = postData._embedded?.['wp:featuredmedia']?.[0]?.source_url;
+    const featuredMedia = postData._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
     if (featuredMedia) {
         const img = document.createElement("img");
         img.src = featuredMedia;
         img.alt = postData.title.rendered;
         img.classList.add("carousel-image");
-        innerContainer.append(img); // Appending to the list item
+        innerContainer.append(img);
     }
+    const textContainer = document.createElement("div");
+    textContainer.classList.add("carousel-text-container");
 
     // Adding the title
     const title = document.createElement("h3");
@@ -35,10 +37,13 @@ export function renderCarousel(postData) {
     readMoreButton.classList.add("carousel-button");
     // postContainer.append(readMoreButton); 
 
-    innerContainer.append(title);
-    innerContainer.append(readMoreButton);
+    textContainer.append(title, readMoreButton);
+
+
+    innerContainer.append(textContainer);
 
     postContainer.append(innerContainer);
-    // Appending the blog post container (ul element) to the main blog container
+
+
     blogContainer.append(postContainer);
 }

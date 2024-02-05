@@ -1,31 +1,21 @@
-import { getBlogs } from "../api/getBlogs.js";
-import { renderBlogs } from "../render/blogs.js";
-/* import { renderBlog } from "../render/detailedblog.js"; */
-
+import { blogsPage } from "../pages/blogs.js";
+import { blogSpecificPage } from "../pages/blogspecific.js";
 
 
 
 export async function router() {
-    switch (location.pathname) {
+    switch (window.location.pathname) {
         case "/blogs/":
-            try {
-                const posts = await getBlogs();
-                posts.forEach(post => {
-                    try {
-                        renderBlogs(post);
-                    } catch (renderError) {
-                        console.error("Error rendering post:", post, renderError);
-                    }
-                });
-                console.log(posts);
-            } catch (fetchError) {
-                console.error("Error fetching blogs: ", fetchError);
-            }
+            blogsPage();
     break;
-    case "/":
-    case "index.html":
-        return import("../pages/homePage.js")
-
+        case "/blogdetails/":
+            blogSpecificPage();
+    break;
+        case "/":
+        case "index.html":
+            return import("../pages/homePage.js")
+    default:
+        console.log("404 - not found")
     };
 }
 

@@ -1,13 +1,13 @@
 // navigation.js
 
-export function initializeNavigation() {
-    let menuToggle = document.getElementById('menu-toggle');
-    let navigation = document.querySelector('.navigation');
+// export function initializeNavigation() {
+//     let menuToggle = document.getElementById('menu-toggle');
+//     let navigation = document.querySelector('.navigation');
 
-    menuToggle.addEventListener('click', function() {
-        navigation.classList.toggle('open');
-    });
-}
+//     menuToggle.addEventListener('click', function() {
+//         navigation.classList.toggle('open');
+//     });
+// }
 
 /*
 document.addEventListener('DOMContentLoaded', function() {

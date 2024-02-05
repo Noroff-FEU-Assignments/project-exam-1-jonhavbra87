@@ -98,7 +98,8 @@ iframe.map {
 }
 
 /* Blog posts */
-.blog-posts {
+.blog-posts,
+.blog-details {
   display: grid;
   /* grid-template-rows: auto; */
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
