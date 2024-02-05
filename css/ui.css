@@ -122,7 +122,7 @@ iframe.map {
 .blog-post-image {
   width: 300px;
   border-radius: 12px 0 0 12px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .blog-post-text-container {
@@ -150,13 +150,14 @@ iframe.map {
   color: var(--variant_of_black);
   display: block;
   border-radius: 10px;
-  padding: 1rem 2rem;
+  padding: 0.7rem 1.5rem;
+  margin-bottom: 5px;
+  align-self: end;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
 }
-
 
 .blog-post-button:hover {
   transform: scale(1.05);

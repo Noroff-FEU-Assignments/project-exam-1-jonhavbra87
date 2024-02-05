@@ -1,5 +1,6 @@
 const host = "https://kongsvinger-it.no";
-const postEndpoint = "/wp-json/wp/v2/posts?_embed";
+// const postEndpoint = "/wp-json/wp/v2/posts?_embed";
+const postEndpoint = "/wp-json/wp/v2/posts";
 
 // Correctly combine the host and endpoint
 export const postsUrl = new URL(postEndpoint, host);

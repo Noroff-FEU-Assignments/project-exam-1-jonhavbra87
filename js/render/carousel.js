@@ -9,8 +9,8 @@ export function renderCarousel(postData) {
     const postContainer = document.createElement("div");
     postContainer.classList.add("slide");
 
-    const innerContainer = document.createElement("div");
-    innerContainer.classList.add("inner-container");
+    // const innerContainer = document.createElement("div");
+    // innerContainer.classList.add("inner-container");
 
     // Adding the featured image if available
     const featuredMedia = postData._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
@@ -19,7 +19,7 @@ export function renderCarousel(postData) {
         img.src = featuredMedia;
         img.alt = postData.title.rendered;
         img.classList.add("carousel-image");
-        innerContainer.append(img);
+        postContainer.append(img);
     }
     const textContainer = document.createElement("div");
     textContainer.classList.add("carousel-text-container");
@@ -41,9 +41,9 @@ export function renderCarousel(postData) {
     textContainer.append(readMoreButton);
 
 
-    innerContainer.append(textContainer);
+    // innerContainer.append(textContainer);
 
-    postContainer.append(innerContainer);
+    postContainer.append(textContainer);
 
 
     blogContainer.append(postContainer);

@@ -2,7 +2,7 @@ import { postsUrl } from "../api/constants.js";
 
 
 export async function getBlogs() {
-    const response = await fetch(postsUrl);
+    const response = await fetch(postsUrl + "?_embed");
     
     if (response.ok) {
         return await response.json();
