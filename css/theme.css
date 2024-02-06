@@ -12,11 +12,21 @@
 *:before,
 *:after {
   box-sizing: inherit;
-  /* color: var(--red); */
   text-decoration: none;
 }
 
 body {
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond,
     "Times New Roman", serif;
+}
+
+header,
+footer {
+  font-family: "DM Mono", monospace;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Sans", sans-serif;
 }

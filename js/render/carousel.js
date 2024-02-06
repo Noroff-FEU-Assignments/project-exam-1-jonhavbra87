@@ -2,6 +2,7 @@ const loader = document.querySelector(".lds-spinner");
 
 export function renderCarousel(postData) {
     loader.innerHTML = "";
+    loader.style.display = "none";
     
     const blogContainer = document.querySelector(".slider");
     if (!blogContainer) {

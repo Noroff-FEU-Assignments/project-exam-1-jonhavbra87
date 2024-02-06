@@ -1,10 +1,5 @@
 /* Header, Footer, navigation, alerts, pop ups */
 
-header,
-footer {
-  font-family: "DM Mono", monospace;
-}
-
 header {
   background-color: var(--red);
   text-transform: uppercase;
@@ -18,36 +13,11 @@ header img {
   height: 80%;
 }
 
-/* Style for the navigation menu */
-.navigation {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-/* Style navigation links */
-.navigation a {
-  text-decoration: none;
-  color: var(--light);
-  padding: 10px;
-  display: block;
-}
-
-/* Hover effect for links */
-.navigation a:hover {
-  opacity: 0.4;
-}
-
-.menu-toggle {
-  display: none; /* Hidden by default on larger screens */
-}
-
 main {
   margin: 0 auto;
   width: 100%;
   max-width: 85rem;
-  margin-bottom: 0;
+  margin-bottom: 50px;
 }
 
 footer {
@@ -58,39 +28,71 @@ footer {
   color: var(--light);
 }
 
+/* Navigation styling */
+.navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--light);
+  padding: 10px;
+  display: block;
+}
+
+.navigation a:hover {
+  opacity: 0.4;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Text-styling */
 h1,
 h2,
 h3 {
-  text-align: center;
-  font-family: "DM Sans", sans-serif;
   text-transform: uppercase;
 }
 
-.hero {
+.branding {
+  font-weight: 500;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.hero-banner {
   position: relative;
-  width: 100vw; /* Set width relative to the viewport width */
-  max-width: none; /* Override max-width */
-  margin-left: calc(-50vw + 50%); /* Center the element */
+  min-height: 40rem;
+  background-image: url(/images/handballag.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.hero img {
-  max-height: 40rem;
-  width: 100%;
-  max-width: 100%;
-  object-fit: cover;
-}
-
-.herotext {
+.hero-banner::after {
+  content: "";
+  font-size: 5vw;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Adjust for precise centering */
-  color: var(--light);
-  text-shadow: 0px 0px 8px #000000;
+  inset: 0; /* set all the direction to 0 all at once */
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    65deg,
+    rgb(0 0 0 / 51%) 25%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 iframe {
-  height: 30rem;
+  height: 20rem;
   width: 100%;
   border-radius: 10px;
 }
@@ -111,14 +113,10 @@ iframe.map {
 .blog-posts,
 .blog-details {
   display: grid;
-  /* grid-template-rows: auto; */
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-  /*  padding: var(--padding); */
-  /* width: 100%; */
   grid-gap: 30px;
 }
 
-.blog-post-specific,
 .blog-post-container {
   display: flex;
   background-color: var(--variant_of_black);
@@ -127,38 +125,39 @@ iframe.map {
   margin: 0 auto;
   margin-bottom: var(--padding);
 }
+.blog-post-specific {
+  /* max-width: 80rem; */
+  border-left: none;
+}
 
 .blog-post-container {
-  max-width: 40rem;
+  /* max-width: 40rem; */
 }
 
 .blog-post-container:hover {
   box-shadow: 0px 0px 10px var(--cherry-red);
 }
 
-.blog-post-image {
+.blog-post-img {
   width: 15rem;
   border-radius: 12px 0 0 12px;
   object-fit: cover;
 }
 
-.blog-post-specific,
 .blog-post-text-container {
-  display: flex;
-  flex-direction: column;
   color: var(--light);
   padding: var(--padding);
   border-left: solid 5px var(--red);
   font-size: 1.2rem;
+  width: 100%;
 }
-.blog-post-specific {
-  max-width: 80rem;
-  border-left: none;
-}
-.blog-post-specific img {
-  width: 80%;
+
+.specific-img {
+  width: 60%;
   margin: 0 auto;
+  border-radius: 15px;
 }
+
 .blog-post-preamble {
   font-size: 1.3rem;
 }
@@ -166,7 +165,7 @@ iframe.map {
 .blog-post-date {
   font-size: 0.9rem;
   margin-top: 10px;
-  text-align: right;
+  text-align: left;
 }
 
 .blog-post-button {
@@ -179,7 +178,7 @@ iframe.map {
   margin-bottom: 5px;
   align-self: end;
   justify-content: center;
-  /* align-items: center; */
+  align-items: right;
   text-align: center;
   font-weight: 400;
 }
@@ -191,7 +190,9 @@ iframe.map {
   color: var(--light); */
 }
 
-/* The loader is from www.... */
+/* ----------------------------------- */
+/* The loader is from https://loading.io/css/ */
+
 .lds-spinner {
   color: var(--red);
   display: inline-block;
@@ -200,6 +201,7 @@ iframe.map {
   height: 80px;
   left: 50%;
 }
+
 .lds-spinner div {
   transform-origin: 40px 40px;
   animation: lds-spinner 1.2s linear infinite;

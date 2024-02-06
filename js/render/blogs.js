@@ -2,7 +2,8 @@ const loader = document.querySelector(".lds-spinner");
 
 export function renderBlogs(postData) {
     loader.innerHTML = "";
-    
+    loader.style.display = "none";
+
     // Selecting the container for blog posts
     const blogContainer = document.querySelector(".blog-posts");
     if (!blogContainer) {
@@ -20,13 +21,13 @@ export function renderBlogs(postData) {
         const img = document.createElement("img");
         img.src = featuredMedia;
         img.alt = postData.title.rendered;
-        img.classList.add("blog-post-image");
+        img.classList.add("blog-post-img");
         postContainer.append(img);
     }
 
     // Creating a container for the text elements
     const textContainer = document.createElement("div");
-    textContainer.classList.add("blog-post-text-container");
+    textContainer.classList.add("blog-post-text-container", "flex-column");
 
     // Adding the title
     const title = document.createElement("h3");

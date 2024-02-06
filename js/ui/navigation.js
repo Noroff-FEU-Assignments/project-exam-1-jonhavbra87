@@ -1,8 +1,6 @@
 // navigation.js
 
 export function initializeNavigation() {
-    console.log("initializeNavigation called");
-
     let menuToggle = document.getElementById('menu-toggle');
     let navigation = document.querySelector('.navigation');
 
@@ -11,8 +9,6 @@ export function initializeNavigation() {
         console.log("Toggle event triggered");
     });
 }
-
-console.log(initializeNavigation()); 
 
 
 // document.addEventListener('DOMContentLoaded', function() {

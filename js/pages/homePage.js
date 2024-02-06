@@ -6,7 +6,7 @@ try {
     const posts = await getBlogs();
     posts.forEach(post => {
         try {
-            renderCarousel(post);;
+            renderCarousel(post);
             initializeCarousel();
         } catch (renderError) {
             console.error("Error rendering post:", post, renderError);

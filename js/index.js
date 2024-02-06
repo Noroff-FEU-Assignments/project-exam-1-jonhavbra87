@@ -3,5 +3,9 @@ import { initializeNavigation } from "../js/ui/navigation.js";
 
 
 
+
+
+
+
 await router();
 initializeNavigation();
