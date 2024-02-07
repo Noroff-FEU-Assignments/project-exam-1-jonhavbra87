@@ -7,6 +7,8 @@ export async function getBlogs(params) {
     
     if (response.ok) {
         return await response.json();
+        
     } 
-    throw new Error("Request failed!")
+    const errorText = await response.text(); // or response.json() if the server sends JSON
+    throw new Error(`Request failed with status ${response.status}: ${errorText}`);
     }

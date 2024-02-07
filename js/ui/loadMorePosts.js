@@ -1,23 +1,19 @@
-// loadMorePost.js
-import { blogsPage, currentPage } from "../pages/blogsPages.js";
+import { blogsPage, setCurrentPage, getCurrentPage } from "../pages/blogs.js";
+
 
 export async function loadMorePosts() {
-    
-const loadMoreBtn = document.getElementById('loadMoreBtn');
-    loadMoreBtn.addEventListener('click', async () => {
+    // Wait for the DOM to update
+    setTimeout(async () => {
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
         console.log(loadMoreBtn);
-        currentPage++; // Increment the current page
-        await blogsPage(); // Call blogsPage to load more posts
-    });
+
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', async () => {
+                setCurrentPage(getCurrentPage() + 1);
+                await blogsPage(); // Call blogsPage to load more posts
+            });
+        } else {
+            console.log('Load More button not found');
+        }
+    }, 0); // The timeout ensures this runs after the current call stack, potentially after the DOM updates
 }
-
-
-// export async function loadMorePosts() {
-//     await loadBlogs();
-
-//     const loadMoreBtn = document.getElementById('loadMoreBtn');
-//     loadMoreBtn.addEventListener('click', async () => {
-//         currentPage++;
-//         await loadBlogs();
-//     });
-// }

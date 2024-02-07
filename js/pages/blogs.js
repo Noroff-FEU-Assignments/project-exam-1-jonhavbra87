@@ -4,8 +4,17 @@ import { displayError } from "../ui/displayError.js";
 
 const errorMessage = document.querySelector(".error-message");
 
-export let currentPage = 1;
-const perPage = 9;
+let currentPage = 1; // keep it non-exported
+
+export function getCurrentPage() {
+    return currentPage;
+}
+
+export function setCurrentPage(page) {
+    currentPage = page;
+}
+
+const perPage = 10;
 
 export async function blogsPage() {
     try {
@@ -25,7 +34,7 @@ export async function blogsPage() {
                 errorMessage.innerHTML = displayError("render-error", "Error rendering blog post.");
             }
         });
-        console.log(posts);
+        // console.log(posts);
     } catch (fetchError) {
         console.error("Error fetching blogs: ", fetchError);
         // // User display

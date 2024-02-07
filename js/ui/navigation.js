@@ -3,12 +3,28 @@
 export function initializeNavigation() {
     let menuToggle = document.getElementById('menu-toggle');
     let navigation = document.querySelector('.navigation');
+    let barsIcon = menuToggle.querySelector('.fa-bars');
+    let xmarkIcon = menuToggle.querySelector('.fa-xmark');
 
     menuToggle.addEventListener('click', function() {
         navigation.classList.toggle('open');
+        barsIcon.style.display = barsIcon.style.display === 'none' ? '' : 'none';
+        xmarkIcon.style.display = xmarkIcon.style.display === 'none' ? '' : 'none';
         console.log("Toggle event triggered");
     });
 }
+
+
+
+// export function initializeNavigation() {
+//     let menuToggle = document.getElementById('menu-toggle');
+//     let navigation = document.querySelector('.navigation');
+
+//     menuToggle.addEventListener('click', function() {
+//         navigation.classList.toggle('open');
+//         console.log("Toggle event triggered");
+//     });
+// }
 
 
 // document.addEventListener('DOMContentLoaded', function() {

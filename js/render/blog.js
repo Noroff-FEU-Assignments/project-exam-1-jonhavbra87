@@ -23,8 +23,16 @@ export function renderBlog(specificData) {
 		img.src = featuredMedia;
 		img.alt = specificData.title.rendered;
 		img.classList.add("specific-img");
-		postContainer.append(img);
-		
+		//create button
+		const modalButton = document.createElement("button");
+    modalButton.textContent = "View Image"; // Or use any text/icon you prefer
+    modalButton.classList.add("btn--open-modal");
+
+	//add eventListener
+		img.addEventListener('click', function() {
+			openModal(featuredMedia);
+		});
+		postContainer.append(img, modalButton);
 	}
 
 	// Creating a container for the text elements
