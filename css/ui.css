@@ -131,10 +131,10 @@ iframe.map {
   position: relative;
 }
 
-.blog-post-container {
-  /* max-width: 40rem; */
-}
-
+/* .blog-post-container {
+  /* max-width: 40rem;
+  } */
+/* 
 .modal {
   position: fixed;
   top: 50%;
@@ -144,7 +144,7 @@ iframe.map {
   background-color: #f3f3f3;
   padding: 5rem 6rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+  z-index: 150;
   transition: all 0.5s;
 }
 
@@ -207,7 +207,7 @@ iframe.map {
 .hidden {
   visibility: hidden;
   opacity: 0;
-}
+} */
 
 .blog-post-container:hover {
   box-shadow: 0px 0px 10px var(--cherry-red);

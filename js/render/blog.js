@@ -27,7 +27,10 @@ export function renderBlog(specificData) {
 		const modalButton = document.createElement("button");
     modalButton.textContent = "View Image"; // Or use any text/icon you prefer
     modalButton.classList.add("btn--open-modal");
-
+	
+	
+	const modal = createModal();
+    postContainer.appendChild(modal);
 	//add eventListener
 		img.addEventListener('click', function() {
 			openModal(featuredMedia);
@@ -69,4 +72,42 @@ export function renderBlog(specificData) {
 	blogContainer.append(postContainer);
 
 	document.title = `KIL | ${specificData.title.rendered}`;
+}
+
+function createModal() {
+    const modal = document.createElement('div');
+    modal.id = "imageModal";
+    modal.classList.add("modal");
+
+    const closeSpan = document.createElement('span');
+    closeSpan.classList.add("close");
+    closeSpan.innerHTML = "&times;";
+    modal.appendChild(closeSpan);
+
+    const modalImage = document.createElement('img');
+    modalImage.classList.add("modal-content");
+    modalImage.id = "modalImage";
+    modal.appendChild(modalImage);
+
+    const caption = document.createElement('div');
+    caption.id = "caption";
+    modal.appendChild(caption);
+
+    return modal;
+}
+// Opening the modal
+modalButton.addEventListener('click', function() {
+    const modal = postContainer.querySelector('#imageModal');
+    const modalImg = postContainer.querySelector('#modalImage');
+    const captionText = postContainer.querySelector('#caption');
+
+    modal.style.display = "block";
+    modalImg.src = featuredMedia;
+    captionText.innerHTML = img.alt;
+});
+
+// Closing the modal
+const span = postContainer.querySelector(".close");
+span.onclick = function() { 
+    modal.style.display = "none";
 }

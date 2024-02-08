@@ -1,7 +1,7 @@
 import { blogsPage } from "../pages/blogs.js";
 import { blogSpecificPage } from "../pages/blogspecific.js";
 import { loadMorePosts } from "../ui/loadMorePosts.js";
-import { initializeModal } from "../ui/modal.js";
+// import { initializeModal } from "../ui/modal.js";
 
 
 //////////////////////////////////////////////
@@ -18,8 +18,7 @@ export async function router() {
         case "/blogdetails/":
         case "/blogdetails":
         case "/blogdetails/index.html":
-            blogSpecificPage();
-            initializeModal();
+            await blogSpecificPage();
     break;
         case "/":
         case "index.html":

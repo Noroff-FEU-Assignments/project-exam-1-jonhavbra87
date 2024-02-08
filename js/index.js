@@ -7,6 +7,7 @@ import { initializeNavigation } from "../js/ui/navigation.js";
 
 
 
-
-await router();
+document.addEventListener('DOMContentLoaded', function() {
+router();
 initializeNavigation();
+})

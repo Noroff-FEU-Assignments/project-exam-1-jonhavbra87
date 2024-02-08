@@ -43,6 +43,9 @@
     width: 100%;
     text-align: center;
     z-index: 998;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s ease-in-out;
   }
 
   .navigation li {
@@ -54,6 +57,7 @@
     display: flex;
     flex-direction: column;
     z-index: 999;
+    max-height: 500px; 
   }
   /* Hero banner */
   .hero-banner {
