@@ -23,19 +23,7 @@ export function renderBlog(specificData) {
 		img.src = featuredMedia;
 		img.alt = specificData.title.rendered;
 		img.classList.add("specific-img");
-		//create button
-		const modalButton = document.createElement("button");
-    modalButton.textContent = "View Image"; // Or use any text/icon you prefer
-    modalButton.classList.add("btn--open-modal");
-	
-	
-	const modal = createModal();
-    postContainer.appendChild(modal);
-	//add eventListener
-		img.addEventListener('click', function() {
-			openModal(featuredMedia);
-		});
-		postContainer.append(img, modalButton);
+		img.append(img);
 	}
 
 	// Creating a container for the text elements
@@ -74,40 +62,55 @@ export function renderBlog(specificData) {
 	document.title = `KIL | ${specificData.title.rendered}`;
 }
 
-function createModal() {
-    const modal = document.createElement('div');
-    modal.id = "imageModal";
-    modal.classList.add("modal");
+// function createModal() {
+//     const modal = document.createElement('div');
+//     modal.id = "imageModal";
+//     modal.classList.add("modal");
 
-    const closeSpan = document.createElement('span');
-    closeSpan.classList.add("close");
-    closeSpan.innerHTML = "&times;";
-    modal.appendChild(closeSpan);
+//     const closeSpan = document.createElement('span');
+//     closeSpan.classList.add("close");
+//     closeSpan.innerHTML = "&times;";
+//     modal.appendChild(closeSpan);
 
-    const modalImage = document.createElement('img');
-    modalImage.classList.add("modal-content");
-    modalImage.id = "modalImage";
-    modal.appendChild(modalImage);
+//     const modalImage = document.createElement('img');
+//     modalImage.classList.add("modal-content");
+//     modalImage.id = "modalImage";
+//     modal.appendChild(modalImage);
 
-    const caption = document.createElement('div');
-    caption.id = "caption";
-    modal.appendChild(caption);
+//     const caption = document.createElement('div');
+//     caption.id = "caption";
+//     modal.appendChild(caption);
 
-    return modal;
-}
-// Opening the modal
-modalButton.addEventListener('click', function() {
-    const modal = postContainer.querySelector('#imageModal');
-    const modalImg = postContainer.querySelector('#modalImage');
-    const captionText = postContainer.querySelector('#caption');
+//     return modal;
+// }
+// // Opening the modal
+// modalButton.addEventListener('click', function() {
+//     const modal = postContainer.querySelector('#imageModal');
+//     const modalImg = postContainer.querySelector('#modalImage');
+//     const captionText = postContainer.querySelector('#caption');
 
-    modal.style.display = "block";
-    modalImg.src = featuredMedia;
-    captionText.innerHTML = img.alt;
-});
+//     modal.style.display = "block";
+//     modalImg.src = featuredMedia;
+//     captionText.innerHTML = img.alt;
+// });
 
-// Closing the modal
-const span = postContainer.querySelector(".close");
-span.onclick = function() { 
-    modal.style.display = "none";
-}
+// // Closing the modal
+// const span = postContainer.querySelector(".close");
+// span.onclick = function() { 
+//     modal.style.display = "none";
+// }
+
+//inside rendering:
+	//create button
+	// const modalButton = document.createElement("button");
+    // modalButton.textContent = "View Image"; // Or use any text/icon you prefer
+    // modalButton.classList.add("btn--open-modal");
+	
+	
+	// const modal = createModal();
+    // postContainer.appendChild(modal);
+	// //add eventListener
+	// 	img.addEventListener('click', function() {
+	// 		openModal(featuredMedia);
+	// 	});
+	// 	postContainer.append(img, modalButton);
