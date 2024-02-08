@@ -15,5 +15,5 @@ export async function loadMorePosts() {
         } else {
             console.log('Load More button not found');
         }
-    }, 0); // The timeout ensures this runs after the current call stack, potentially after the DOM updates
+    }, 0); // The timeout ensures this runs after the current call
 }

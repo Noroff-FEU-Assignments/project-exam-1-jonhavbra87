@@ -4,10 +4,10 @@ import { initializeNavigation } from "../js/ui/navigation.js";
 
 
 
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-router();
+await router();
 initializeNavigation();
-})
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+
+// })
