@@ -1,5 +1,6 @@
 import { blogsPage } from "../pages/blogs.js";
 import { blogSpecificPage } from "../pages/blogspecific.js";
+import { createCarousel } from "../pages/homePage.js";
 // import { renderLatestBlogs } from "../ui/latestNews.js";
 import { loadMorePosts } from "../ui/loadMorePosts.js";
 // import { initializeModal } from "../ui/modal.js";
@@ -27,7 +28,7 @@ export async function router() {
     break;
         case "/":
         case "index.html":
-            return import("../pages/homePage.js")
+            return createCarousel();
     default:
         console.log("404 - not found")
     };

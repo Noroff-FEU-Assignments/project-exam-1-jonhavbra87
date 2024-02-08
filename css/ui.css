@@ -134,7 +134,48 @@ iframe.map {
 /* .blog-post-container {
   /* max-width: 40rem;
   } */
-/* 
+
+/* Modal Styling */
+.btn--open-modal {
+  position: absolute;
+  right: 10px; /* Adjust as needed */
+  bottom: 10px; /* Adjust as needed */
+  /* other button styling */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px; /* Adjust as needed */
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+  /* 
+
 .modal {
   position: fixed;
   top: 50%;
