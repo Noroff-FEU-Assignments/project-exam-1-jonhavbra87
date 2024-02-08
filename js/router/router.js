@@ -1,6 +1,6 @@
 import { blogsPage } from "../pages/blogs.js";
 import { blogSpecificPage } from "../pages/blogspecific.js";
-import { renderLatestBlogs } from "../ui/latestNews.js";
+// import { renderLatestBlogs } from "../ui/latestNews.js";
 import { loadMorePosts } from "../ui/loadMorePosts.js";
 // import { initializeModal } from "../ui/modal.js";
 
@@ -24,7 +24,6 @@ export async function router() {
         case "/contact/":
         case "/contact":
         case "contact/index.html":
-            await renderLatestBlogs();
     break;
         case "/":
         case "index.html":
