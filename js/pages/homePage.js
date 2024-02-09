@@ -2,6 +2,8 @@ import { getBlogs } from "../api/getBlogs.js";
 import { renderCarousel } from "../render/carousel.js";
 import { initializeCarousel } from "../ui/carousel/carousel.js"
 
+const errorMessage = document.querySelector(".slider");
+
 export async function createCarousel() {
     try {
         const posts = await getBlogs();
@@ -17,7 +19,12 @@ export async function createCarousel() {
         });
         // Runs the carousel after the posts are filtered and rendered
         initializeCarousel();
-    } catch (fetchError) {
-        console.error("Error fetching blogs: ", fetchError);
-    }
+    } catch (error) {
+		//Developer console log
+		console.log("Unable to fetch api", error);
+
+		// User display
+        errorMessage.innerHTML += displayError("fetch-error", `Unable to fetch blog post: ${error}`);
+        errorMessage.style.display = 'block';
+	}
 }

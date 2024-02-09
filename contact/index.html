@@ -19,22 +19,17 @@
       src="https://kit.fontawesome.com/fe3b43ee88.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Hotjar Tracking Code for https://gamehub-ixd-jahb.netlify.app/ -->
-    <!--     <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 3735364, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script> -->
+<!-- Hotjar Tracking Code for project-exam-1 -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:3860157,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
   </head>
   <body>
     <header>
@@ -53,23 +48,91 @@
       </nav>
     </header>
     <main>
-      <h1>kontakt oss</h1>
-      <div class="error-message"></div>
-      <div class="lds-spinner">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+      <img src="/images/kil handball logo.png" alt="logo of KIL handball" class="specific-img text-align-center margin-top">
+      <div class= "blog-post-text-container color-dark justified-center margin-top">
+          <h1>Kontaktinformasjon for KIL Håndball</h1>
+          <p>Vi hører gjerne fra deg! Enten du er interessert i å bli med i klubben, har spørsmål om våre programmer, eller ønsker å bidra som frivillig, er vi her for å hjelpe.</p>
+          <h2>Kontaktpersoner:</h2>
+        <h3>Bent Shútz, Styreleder Kongsvinger IL Håndball</h3>
+            <ul>
+            <li>E-post: bent.shutz@kil-handball.no</li>
+            <li>Telefon: +47 123 45 678</li>
+          </ul>
+          <h3>Steinar Eriksen, leder Sportslig utvalg</h3>
+            <ul>
+            <li>E-post: steinar.eriksen@kil-handball.no</li>
+            <li>Telefon: +47 977 13 546</li>
+          </ul>
+        <h3>Besøksadresse:</h3>
+          <ul>
+          <li>E-post: steinar.eriksen@kil-handball.no</li>
+          <li>Telefon: +47 977 13 546</li>
+        </ul>
+        <h3>Sosiale medier:</h3>
+        <ul>
+        <li>Facebookk</li>
+        <li>Instagram</li>
+        <li>X</li>
+      </ul>
+
+      <h3>Klubbens åpningstider</h3>
+      <ul>
+      <li>Mandag - Fredag: 09:00 - 16:00</li>
+      <li>Lørdag - Søndag: 10:00 - 14:00</li>
+    </ul>
+  </div>
+      <div class="form-container">
+        <form
+          method="GET"
+          action="/contactSuccess/index.html"
+          class="wrapper contact"
+          id="contactForm"
+        >
+          <div>
+            <label>
+              Name (required)
+              <input name="Name" id="Name" />
+            </label>
+            <div class="form-error" id="NameError">
+              <i class="fa-solid fa-triangle-exclamation"></i> Minimum 5 characters
+            </div>
+          </div>
+          <div>
+            <label>
+              Phone number (minimum 8 digits)
+              <input name="phone" id="phone" />
+            </label>
+            <div class="form-error" id="phoneError">
+              <i class="fa-solid fa-triangle-exclamation"></i> Your phone
+              number must be at least 8 digits
+            </div>
+          </div>
+          <div>
+            <label>
+              Email (required) <input name="email" id="email" />
+            </label>
+            <div class="form-error" id="emailError">
+              <i class="fa-solid fa-triangle-exclamation"></i> Please enter a
+              valid email address
+            </div>
+          </div>
+          <div>
+            <label>
+              Message
+              <textarea
+                placeholder="Please write yor message here"
+                name="story"
+                id="story"
+                rows="5"
+                cols="25"
+              ></textarea>
+            </label>
+          </div>
+
+          <input type="submit" class="loadMoreBtn" value="Submit" />
+        </form>
       </div>
-      <div class="slider justified-center"></div>
+    </div>
     </main>
     <footer>
       <address>Markensvegen 20, 2212 Kongsvinger</address>

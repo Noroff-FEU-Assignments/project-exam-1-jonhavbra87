@@ -8,36 +8,19 @@ export function initializeNavigation() {
 
     menuToggle.addEventListener('click', function() {
         navigation.classList.toggle('open');
-        barsIcon.style.display = barsIcon.style.display === 'none' ? '' : 'none';
-        xmarkIcon.style.display = xmarkIcon.style.display === 'none' ? '' : 'none';
+
+        if (barsIcon.style.display === "none") {
+            barsIcon.style.display = "";
+        } else {
+            barsIcon.style.display = "none";
+        }
+
+        if (xmarkIcon.style.display === 'none') {
+            xmarkIcon.style.display = '';
+        } else {
+            xmarkIcon.style.display = 'none';
+        }
+
         console.log("Toggle event triggered");
     });
 }
-
-
-
-// export function initializeNavigation() {
-//     let menuToggle = document.getElementById('menu-toggle');
-//     let navigation = document.querySelector('.navigation');
-
-//     menuToggle.addEventListener('click', function() {
-//         navigation.classList.toggle('open');
-//         console.log("Toggle event triggered");
-//     });
-// }
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const menu = document.getElementById('main-nav').querySelector('ul');
-//     const menuButton = document.getElementById('menu-button'); // You need to add this button in HTML
-
-//     menuButton.addEventListener('click', function() {
-//         if (menu.classList.contains('hidden')) {
-//             menu.classList.remove('hidden');
-//             menu.classList.add('visible');
-//         } else {
-//             menu.classList.remove('visible');
-//             menu.classList.add('hidden');
-//         }
-//     });
-// });

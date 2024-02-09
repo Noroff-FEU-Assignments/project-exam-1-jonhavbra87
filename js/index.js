@@ -3,11 +3,6 @@ import { initializeNavigation } from "../js/ui/navigation.js";
 
 
 
-
-await router();
 initializeNavigation();
+await router();
 
-
-// document.addEventListener('DOMContentLoaded', function() {
-
-// })

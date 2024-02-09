@@ -33,12 +33,17 @@ footer {
 }
 
 .flex,
-.flex-column {
+.flex-column,
+.flex-row {
   display: flex;
 }
 
 .flex-column {
   flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .justified-center {

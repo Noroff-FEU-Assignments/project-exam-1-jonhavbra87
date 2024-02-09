@@ -8,15 +8,15 @@ export async function blogSpecificPage() {
 	try {
 		const url = new URL(location.href);
 		let id = url.searchParams.get("id");
-		//console.log(id);
+		// console.log(id);
 
 		const post = await getBlog(id);
 		
 		//console.log(post);
 
-		// Clear any previous error messages
 		errorMessage.innerHTML = "";
 		errorMessage.style.display = 'none';
+
 		renderBlog(post);
 	} catch (error) {
 		//Developer console log
