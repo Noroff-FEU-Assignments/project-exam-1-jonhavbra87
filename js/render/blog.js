@@ -2,14 +2,6 @@ const loader = document.querySelector(".lds-spinner");
 
 
 
-const modal = document.getElementById('imageModal');
-const span = document.getElementsByClassName("close")[0];
-
-span.onclick = function() { 
-    modal.style.display = "none";
-}
-
-
 
 export function renderBlog(specificData) {
 	
@@ -34,9 +26,28 @@ export function renderBlog(specificData) {
 		img.src = featuredMedia;
 		img.alt = specificData.title.rendered;
 		img.classList.add("specific-img");
-		postContainer.append(img);
 	}
 
+	  // Create the button to open the modal
+	  const modalButton = document.createElement("button");
+	  modalButton.textContent = "View Image"; // Or your preferred text
+	  modalButton.classList.add("btn--open-modal");
+
+	  // Append the image and the button to the post container
+	  postContainer.append(img);
+	  postContainer.append(modalButton);
+
+	   // Event listener for opening the modal
+	   modalButton.addEventListener('click', function() {
+		const modal = document.querySelector('#imageModal');
+		const modalImg = document.querySelector('#modalImage');
+		const captionText = document.querySelector('#caption');
+
+		modal.style.display = "block";
+		modalImg.src = featuredMedia;
+		captionText.innerHTML = img.alt;
+	});
+}
 	// Creating a container for the text elements
 	const textContainer = document.createElement("div");
 	textContainer.classList.add("blog-post-text-container", "color-dark");
@@ -64,9 +75,8 @@ export function renderBlog(specificData) {
 	dateElement.classList.add("blog-post-date");
 	textContainer.append(dateElement);
 
-	const modal = createModal();
 
-    postContainer.append(modal);
+
 
 	postContainer.append(textContainer);
 
@@ -85,40 +95,20 @@ export function renderBlog(specificData) {
 		captionText.innerHTML = img.alt;
 	});
 
-	// Closing the modal
-	const span = postContainer.querySelector(".close");
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
 
 	
 
 	document.title = `KIL | ${specificData.title.rendered}`;
+
 }
 
-function createModal() {
-    const modal = document.createElement('div');
-    modal.id = "imageModal";
-    modal.classList.add("modal");
+// Outside of renderBlog, maintain the modal close functionality
+const modal = document.getElementById('imageModal');
+const span = document.getElementsByClassName("close")[0];
 
-    const closeSpan = document.createElement('span');
-    closeSpan.classList.add("close");
-    closeSpan.innerHTML = "&times;";
-    modal.appendChild(closeSpan);
-
-    const modalImage = document.createElement('img');
-    modalImage.classList.add("modal-content");
-    modalImage.id = "modalImage";
-    modal.appendChild(modalImage);
-
-    const caption = document.createElement('div');
-    caption.id = "caption";
-    modal.appendChild(caption);
-
-    return modal;
+span.onclick = function() { 
+    modal.style.display = "none";
 }
-
-
 
 // function createModal() {
 //     const modal = document.createElement('div');
