@@ -2,11 +2,7 @@ import { blogsPage } from "../pages/blogs.js";
 import { blogSpecificPage } from "../pages/blogspecific.js";
 import { createCarousel } from "../pages/homePage.js";
 import { formValidator } from "../ui/forms.js";
-// import { renderLatestBlogs } from "../ui/latestNews.js";
 import { loadMorePosts } from "../ui/loadMorePosts.js";
-
-// import { initializeModal } from "../ui/modal.js";
-
 
 //////////////////////////////////////////////
 //My Router
@@ -19,9 +15,9 @@ export async function router() {
             blogsPage();
             loadMorePosts();
     break;
-        case "/blogdetails/":
-        case "/blogdetails":
-        case "/blogdetails/index.html":
+        case "/blogspecific/":
+        case "/blogspecific":
+        case "/blogspecific/index.html":
             await blogSpecificPage();
     break;
         case "/contact/":

@@ -17,7 +17,7 @@ export async function createCarousel() {
                 console.error("Error rendering post:", post, renderError);
             }
         });
-        // Runs the carousel after the posts are filtered and rendered
+     
         initializeCarousel();
     } catch (error) {
 		//Developer console log

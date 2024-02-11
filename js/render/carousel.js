@@ -36,7 +36,7 @@ export function renderCarousel(postData) {
 
     // Adding a read more button (anchortag)
     const readMoreButton = document.createElement("a");
-    readMoreButton.href = "/blogdetails/?id=" + postData.id;
+    readMoreButton.href = "/blogspecific/?id=" + postData.id;
     readMoreButton.textContent = "Read More";
     readMoreButton.classList.add("carousel-button");
 

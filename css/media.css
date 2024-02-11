@@ -1,7 +1,45 @@
 /* @media (max-with: 40rem) */
 
 /* Hide menu items and show toggle button on smaller screens */
-@media (min-width: 641px) and (max-width: 1309px) {
+@media (min-width: 80rem) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 70rem 1fr;
+  }
+
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  }
+
+  header {
+    /* display: flex; */
+    justify-content: space-around;
+  }
+  /* header {
+    display: grid;
+  } */
+
+  /* .header-left {
+    grid-row: 1;
+    grid-column: 1 / 2;
+  }
+
+
+
+  .header-right {
+    grid-row: 1;
+    grid-column: 3 / -1;
+  } */
+  .header-content {
+    display: flex;
+  }
+}
+
+@media (min-width: 641px) {
+  body {
+    grid-template-columns: 1fr 30rem 1fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); */
+  }
   .blog-posts {
     display: flex;
     flex-wrap: wrap;
@@ -27,7 +65,7 @@
     font-size: 3rem;
     cursor: pointer;
     position: absolute;
-    top: 20px;
+    top: 15px;
     right: 20px;
     z-index: 1000;
     background: transparent;
@@ -37,13 +75,13 @@
 
   .navigation {
     display: none;
-    position: absolute;
+    /* position: absolute; */
     top: 100px;
     left: 0;
     width: 100%;
     text-align: center;
     z-index: 998;
-    transition: max-height 1s ease-out, opacity 1ms ease-out;
+    transition: max-height 0.3s ease-out, opacity 1ms ease-out;
     max-height: 0;
     opacity: 0;
     overflow: hidden;
@@ -58,7 +96,7 @@
     display: flex;
     flex-direction: column;
     z-index: 999;
-    max-height: 500px; /* Adjust as per actual max height */
+    max-height: 500px;
     opacity: 1;
   }
 

@@ -89,14 +89,17 @@
   z-index: 10;
   border: none;
   background: rgba(255, 255, 255, 0.5);
-  /* background: transparent; */
-  box-shadow: 100px rgba(255, 255, 255, 0.5);
+  /* box-shadow: 100px rgba(255, 255, 255, 0.5); */
   font-family: inherit;
   color: var(--variant_of_black);
-  border-radius: 30%;
-  height: 6rem;
-  width: 6rem;
+  border-radius: 25%;
+  height: 4rem;
+  width: 4rem;
   cursor: pointer;
+}
+
+.slider__btn:hover {
+  opacity: 0.8;
 }
 
 .slider__btn--left {
@@ -123,7 +126,7 @@
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
-  margin-right: 1.75rem;
+  margin-right: 1.5rem;
   cursor: pointer;
   transition: all 0.5s;
 }

@@ -50,7 +50,7 @@ export function renderBlogs(postData) {
 
     // Adding a read more button
     const readMoreButton = document.createElement("a");
-    readMoreButton.href = "/blogdetails/?id=" + postData.id;
+    readMoreButton.href = "/blogspecific/?id=" + postData.id;
     readMoreButton.textContent = "Read More";
     readMoreButton.classList.add("blog-post-button");
     textContainer.append(readMoreButton);

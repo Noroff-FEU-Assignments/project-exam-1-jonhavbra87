@@ -33,106 +33,120 @@
   </head>
   <body>
     <header>
-      <img src="/images/kil handball logo.png" alt="logo of kil handball" />
-      <nav id="main-nav">
-        <button id="menu-toggle" class="menu-toggle">&#9776;</button>
-        <ul class="navigation">
-          <li><a href="/">hjemmeside</a></li>
-          <li><a href="/blogs/">nyheter</a></li>
-          <li><a href="/about/">om oss</a></li>
-          <li><a href="/contact/">kontakt</a></li>
-          <li><a href="/Klubbhuset/">Klubbhuset </a></li>
-          <li><a href="/sponsors/">sponsorer</a></li>
-          <li><a href="/annual_wheel/">årshjul</a></li>
-        </ul>
-      </nav>
+      <div class="header-content background-red">
+        <div class="header-logo">
+          <a href="/"
+            ><img
+              src="/images/kil handball logo.png"
+              alt="logo of kil handball"
+          /></a>
+        </div>
+        <nav id="main-nav">
+          <button id="menu-toggle" class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark" style="display: none"></i>
+          </button>
+          <ul class="navigation flex">
+            <li><a href="/" class="active">hjemmeside</a></li>
+            <li><a href="/blogs/">nyheter</a></li>
+            <li><a href="/about/">om oss</a></li>
+            <li><a href="/contact/">kontakt</a></li>
+            <li><a href="/Klubbhuset/">Klubbhuset </a></li>
+            <li><a href="/sponsors/">sponsorer</a></li>
+            <li><a href="/annual_wheel/">årshjul</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
-      <img src="/images/kil handball logo.png" alt="logo of KIL handball" class="specific-img text-align-center margin-top">
-      <div class= "blog-post-text-container color-dark justified-center margin-top">
-          <h1>Kontaktinformasjon for KIL Håndball</h1>
-          <p>Vi hører gjerne fra deg! Enten du er interessert i å bli med i klubben, har spørsmål om våre programmer, eller ønsker å bidra som frivillig, er vi her for å hjelpe.</p>
-          <h2>Kontaktpersoner:</h2>
-        <h3>Bent Shútz, Styreleder Kongsvinger IL Håndball</h3>
+      <div class="margin-top flex-column justified-center">
+      <img src="/images/kil handball logo.png" alt="logo of KIL handball"  class="specific-img logo">
+        <div class="blog-post-text-container color-dark">
+            <h1>Kontaktinformasjon for KIL Håndball</h1>
+            <p>Vi hører gjerne fra deg! Enten du er interessert i å bli med i klubben, har spørsmål om våre programmer, eller ønsker å bidra som frivillig, er vi her for å hjelpe.</p>
+            <h2 class="h2-extra">Kontaktpersoner:</h2>
+            <h3>Bent Shútz, Styreleder Kongsvinger IL Håndball</h3>
+              <ul>
+                <li>E-post: bent.shutz@kil-handball.no</li>
+                <li>Telefon: +47 123 45 678</li>
+              </ul>
+            <h3>Steinar Eriksen, leder Sportslig utvalg</h3>
+              <ul>
+                <li>E-post: steinar.eriksen@kil-handball.no</li>
+                <li>Telefon: +47 977 13 546</li>
+            </ul>
+          <h3>Besøksadresse:</h3>
             <ul>
-            <li>E-post: bent.shutz@kil-handball.no</li>
-            <li>Telefon: +47 123 45 678</li>
+              <li>E-post: steinar.eriksen@kil-handball.no</li>
+             <li>Telefon: +47 977 13 546</li>
           </ul>
-          <h3>Steinar Eriksen, leder Sportslig utvalg</h3>
-            <ul>
-            <li>E-post: steinar.eriksen@kil-handball.no</li>
-            <li>Telefon: +47 977 13 546</li>
-          </ul>
-        <h3>Besøksadresse:</h3>
+          <h3>Sosiale medier:</h3>
+          <div class="flex-row gap padding color-dark">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
+          </div>
+
+        <h3>Klubbens åpningstider</h3>
           <ul>
-          <li>E-post: steinar.eriksen@kil-handball.no</li>
-          <li>Telefon: +47 977 13 546</li>
-        </ul>
-        <h3>Sosiale medier:</h3>
-        <ul>
-        <li>Facebookk</li>
-        <li>Instagram</li>
-        <li>X</li>
-      </ul>
-
-      <h3>Klubbens åpningstider</h3>
-      <ul>
-      <li>Mandag - Fredag: 09:00 - 16:00</li>
-      <li>Lørdag - Søndag: 10:00 - 14:00</li>
-    </ul>
-  </div>
-      <div class="form-container">
-        <form
-          method="GET"
-          action="/contactSuccess/index.html"
-          class="wrapper contact"
-          id="contactForm"
-        >
-          <div>
-            <label>
-              Name (required)
-              <input name="Name" id="Name" />
-            </label>
-            <div class="form-error" id="NameError">
-              <i class="fa-solid fa-triangle-exclamation"></i> Minimum 5 characters
-            </div>
-          </div>
-          <div>
-            <label>
-              Phone number (minimum 8 digits)
-              <input name="phone" id="phone" />
-            </label>
-            <div class="form-error" id="phoneError">
-              <i class="fa-solid fa-triangle-exclamation"></i> Your phone
-              number must be at least 8 digits
-            </div>
-          </div>
-          <div>
-            <label>
-              Email (required) <input name="email" id="email" />
-            </label>
-            <div class="form-error" id="emailError">
-              <i class="fa-solid fa-triangle-exclamation"></i> Please enter a
-              valid email address
-            </div>
-          </div>
-          <div>
-            <label>
-              Message
-              <textarea
-                placeholder="Please write yor message here"
-                name="story"
-                id="story"
-                rows="5"
-                cols="25"
-              ></textarea>
-            </label>
-          </div>
-
-          <input type="submit" class="loadMoreBtn" value="Submit" />
-        </form>
-      </div>
+           <li>Mandag - Fredag: 09:00 - 16:00</li>
+           <li>Lørdag - Søndag: 10:00 - 14:00</li>
+         </ul>
     </div>
+    <div class="form-container">
+      <form
+        method="GET"
+        action="/contactSuccess/index.html"
+        class="wrapper contact"
+        id="contactForm"
+      >
+        <div>
+          <label>
+            Name (required)
+            <input name="Name" id="Name" />
+          </label>
+          <div class="form-error" id="NameError">
+            <i class="fa-solid fa-triangle-exclamation"></i> Minimum 5 characters
+          </div>
+        </div>
+        <div>
+          <label>
+            Phone number (minimum 8 digits)
+            <input name="phone" id="phone" />
+          </label>
+          <div class="form-error" id="phoneError">
+            <i class="fa-solid fa-triangle-exclamation"></i> Your phone
+            number must be at least 8 digits
+          </div>
+        </div>
+        <div>
+          <label>
+            Email (required) <input name="email" id="email" />
+          </label>
+          <div class="form-error" id="emailError">
+            <i class="fa-solid fa-triangle-exclamation"></i> Please enter a
+            valid email address
+          </div>
+        </div>
+        <div>
+          <label>
+            Message
+            <textarea
+              placeholder="Please write yor message here"
+              name="story"
+              id="story"
+              rows="5"
+              cols="25"
+            ></textarea>
+          </label>
+        </div>
+
+        <input type="submit" class="loadMoreBtn" value="Submit" />
+      </form>
+    </div>
+  </div>
+  </div>
+      
     </main>
     <footer>
       <address>Markensvegen 20, 2212 Kongsvinger</address>

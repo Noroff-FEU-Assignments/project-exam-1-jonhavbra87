@@ -8,26 +8,40 @@
   --variant_of_black: #181414;
   --alert: red;
 }
-
+* {
+  box-sizing: border-box;
+}
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond,
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text",
     "Times New Roman", serif;
+  /* font-family: "Antic Slab", serif; */
+  /* font-family: "Padauk", sans-serif; */
 }
 
 header,
 footer {
   font-family: "DM Mono", monospace;
+  /* font-family: "Antic Slab", serif; */
+  font-weight: 550;
 }
 
-h1,
+h1 {
+  /* font-family: "DM Sans", sans-serif; */
+  font-family: "Source Sans 3", sans-serif;
+  /* font-family: "Antic Slab", serif; */
+}
+
 h2,
 h3 {
-  font-family: "DM Sans", sans-serif;
+  /* font-family: "Istok Web", sans-serif; */
+  font-family: "Antic Slab", serif;
 }

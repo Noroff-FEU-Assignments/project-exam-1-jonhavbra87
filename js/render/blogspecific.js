@@ -32,13 +32,13 @@ export function renderBlog(specificData) {
 	// Adding the title
 	const title = document.createElement("h3");
 	title.textContent = specificData.title.rendered;
-	title.classList.add("blog-post-title", "text-align-center");
+	title.classList.add("blog-post-title", "text-animation", "margin-bottom", "center");
 	textContainer.append(title);
 
 	// Adding the text content
 	const content = document.createElement("div");
 	content.innerHTML = specificData.content.rendered;
-	content.classList.add("blog-post-preamble");
+	content.classList.add("blog-post-preamble", "margin-bottom");
 	textContainer.append(content);
 
 	// Adding the date

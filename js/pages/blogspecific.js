@@ -1,11 +1,14 @@
 import { getBlog } from "../api/getBlog.js";
-import { renderBlog } from "../render/blog.js";
+import { renderBlog } from "../render/blogspecific.js";
 import { displayError } from "../ui/displayError.js";
 
 const errorMessage = document.querySelector(".error-message");
 
 export async function blogSpecificPage() {
 	try {
+		errorMessage.innerHTML = "";
+		errorMessage.style.display = 'none';
+
 		const url = new URL(location.href);
 		let id = url.searchParams.get("id");
 		// console.log(id);
@@ -13,9 +16,6 @@ export async function blogSpecificPage() {
 		const post = await getBlog(id);
 		
 		//console.log(post);
-
-		errorMessage.innerHTML = "";
-		errorMessage.style.display = 'none';
 
 		renderBlog(post);
 	} catch (error) {

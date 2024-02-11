@@ -4,7 +4,7 @@ import { displayError } from "../ui/displayError.js";
 
 const errorMessage = document.querySelector(".error-message");
 
-let currentPage = 1; // keep it non-exported
+let currentPage = 1;
 
 export function getCurrentPage() {
     return currentPage;
@@ -18,9 +18,11 @@ const perPage = 10;
 
 export async function blogsPage() {
     try {
-        const posts = await getBlogs(`per_page=${perPage}&page=${currentPage}`);
         errorMessage.innerHTML = "";
         errorMessage.style.display = 'none';
+
+        const posts = await getBlogs(`per_page=${perPage}&page=${currentPage}`);
+       
 
         posts.forEach(post => {
             try {
