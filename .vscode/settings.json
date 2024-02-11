@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["blogspecific", "Hjemmeside", "Kongsvinger"]
+  "cSpell.words": ["blogspecific", "Hjemmeside", "Kongsvinger"],
+  "livePreview.defaultPreviewPath": "/index.html"
 }

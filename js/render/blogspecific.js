@@ -36,7 +36,7 @@ export function renderBlog(specificData) {
 	textContainer.append(title);
 
 	// Adding the text content
-	const content = document.createElement("div");
+	const content = document.createElement("p");
 	content.innerHTML = specificData.content.rendered;
 	content.classList.add("blog-post-preamble", "margin-bottom");
 	textContainer.append(content);
