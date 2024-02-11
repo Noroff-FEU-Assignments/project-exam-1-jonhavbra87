@@ -194,8 +194,7 @@ iframe.map {
   word-spacing: 1px;
 }
 
-.blog-post-title,
-p {
+.blog-post-title {
   margin-bottom: 10px;
   word-wrap: break-word;
   word-break: break-all;
