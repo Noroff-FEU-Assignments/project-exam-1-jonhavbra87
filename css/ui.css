@@ -273,14 +273,14 @@ i {
 .modalContent {
   margin: auto;
   display: block;
-  max-width: 70%;
+  max-width: 60%;
   max-height: 40vh;
   object-fit: contain;
 }
 
 .close {
   position: absolute;
-  top: 150px;
+  top: 30px;
   right: 35px;
   color: #ffffff;
   font-size: 40px;

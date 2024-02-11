@@ -23,6 +23,7 @@ export function renderBlog(specificData) {
 		img.alt = specificData.title.rendered;
 		img.classList.add("specific-img");
 		postContainer.append(img);
+		
 	}
 
 	// Creating a container for the text elements
