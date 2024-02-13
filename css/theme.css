@@ -21,27 +21,17 @@
 }
 
 body {
-  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text",
-    "Times New Roman", serif;
-  /* font-family: "Antic Slab", serif; */
-  /* font-family: "Padauk", sans-serif; */
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text";
 }
 
 header,
 footer {
-  font-family: "DM Mono", monospace;
-  /* font-family: "Antic Slab", serif; */
-  font-weight: 400;
+  font-family: "DM Sans", sans-serif;
+  /* font-weight: 400; */
 }
 
-h1 {
-  /* font-family: "DM Sans", sans-serif; */
-  font-family: "Source Sans 3", sans-serif;
-  /* font-family: "Antic Slab", serif; */
-}
-
+h1,
 h2,
 h3 {
-  /* font-family: "Istok Web", sans-serif; */
-  font-family: "Antic Slab", serif;
+  font-family: "DM Mono", monospace;
 }

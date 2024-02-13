@@ -57,17 +57,14 @@
             <li><a href="/blogs/">nyheter</a></li>
             <li><a href="/about/">om oss</a></li>
             <li><a href="/contact/">kontakt</a></li>
-            <li><a href="/Klubbhuset/">Klubbhuset </a></li>
-            <li><a href="/sponsors/">sponsorer</a></li>
-            <li><a href="/annual_wheel/">årshjul</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <div class="hero-banner flex-column justified-center text-align-center">
-        <div class="hero-content padding color-light font-bigger">
+      <div class="hero-banner justified-center text-align-center">
+        <div class="hero-content flex-column padding color-light font-bigger">
           <h1>velkommen til kil håndball</h1>
           <p class="branding margin-top">
             sammen skaper vi idrettsglede og bygger karakter!
@@ -104,22 +101,31 @@
         treningstider
       </h3>
       <iframe
+        class="treningskalender justified-center"
         id="treningstider"
         src="https://calendar.hoopit.io/public-calendar/a3edee39-5b25-466b-ba6c-ad436d4ccfce/"
-        scrolling="yes"
         allow="fullscreen"
       ></iframe>
     </main>
     <footer>
-      <address>Markensvegen 20, 2212 Kongsvinger</address>
-      <iframe
-        class="map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.3514881766598!2d12.01261107733423!3d60.19146584171482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464248f04d05cc4f%3A0xa2b3522e28cb376c!2sTr%C3%A5stadhallen!5e0!3m2!1sno!2sno!4v1705919027887!5m2!1sno!2sno"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+      <div class="google-maps">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.3514881766598!2d12.01261107733423!3d60.19146584171482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464248f04d05cc4f%3A0xa2b3522e28cb376c!2sTr%C3%A5stadhallen!5e0!3m2!1sno!2sno!4v1705919027887!5m2!1sno!2sno"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="footer-info text-align-center">
+        <address class="margin-top">Markensvegen 20, 2212 Kongsvinger</address>
+        <div class="flex-row gap padding color-light justified-center">
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-square-instagram"></i>
+          <i class="fa-brands fa-square-x-twitter"></i>
+        </div>
+      </div>
     </footer>
     <!-- <div class="header-left background-red"></div>
     <div class="header-right background-red"></div> -->
