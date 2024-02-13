@@ -129,11 +129,12 @@ h3 {
   font-size: 5vw;
   position: absolute;
   inset: 0;
-  /* background: rgb(0, 0, 0); */
+  background: rgb(0, 0, 0);
   background: linear-gradient(
-    65deg,
-    rgb(0 0 0 / 51%) 50%,
-    rgba(255, 255, 255, 0) 100%
+    90deg,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.4)
   );
 }
 
