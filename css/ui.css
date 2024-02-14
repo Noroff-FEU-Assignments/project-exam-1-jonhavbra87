@@ -140,11 +140,33 @@ h3 {
   height: 100%;
 }
 
+.calendar {
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+.enkelkalender {
+  width: 25rem;
+}
+
+#treningstider0,
+#treningstider1,
+#treningstider2 {
+  width: 100%;
+}
+
+/* #treningstider0:hover,
+#treningstider1:hover,
+#treningstider2:hover {
+  width: 30rem;
+} */
+
 .treningskalender {
   height: 40rem;
-  width: 100%;
+  /* width: 100%; */
   border-radius: 10px;
+  background-color: #f3f3f3;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: auto;
 }
 
 iframe.map {
@@ -355,6 +377,24 @@ button:hover::after {
 /* ----------------------------------- */
 
 /* Form */
+.contact-page-container {
+  /* position: relative; */
+  margin: 0 auto;
+}
+.form-bkg-clr {
+  background-color: limegreen;
+  padding: 3rem 0;
+  /* min-width: 100vw; */
+  /* background-image: url(/images/hero-pic.png); */
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-width: 100vw;
+  left: 50%;
+  transform: translateX(-50%); */
+}
+
 .login-container,
 .form-container {
   max-width: 544px;

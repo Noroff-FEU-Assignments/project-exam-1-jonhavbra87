@@ -1,14 +1,15 @@
 /* @media (max-with: 40rem) */
 
 /* Hide menu items and show toggle button on smaller screens */
+
+/* @media (min-width: 1440px) {
+  ha tre rader med blogposts. mobilvisning. bilde øverst og tekst under
+} */
+
 @media (min-width: 1280px) {
   body {
     display: grid;
     grid-template-columns: 1fr 70rem 1fr;
-  }
-
-  main {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
   }
 
   footer {
@@ -24,7 +25,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 80rem) {
+@media (min-width: 768px) and (max-width: 1280px) {
   body {
     min-height: 200vh;
     display: grid;
@@ -101,6 +102,20 @@
     width: 95%;
     border-radius: 12px;
   }
+  .calendar {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .enkelkalender {
+    width: 80%;
+    margin: auto;
+  }
+
+  /* #treningstider0,
+  #treningstider1,
+  #treningstider2 {
+  } */
 }
 
 @media (max-width: 758px) {
@@ -221,11 +236,14 @@
     font-weight: 500;
     margin: 0 auto;
   }
-
+  .calendar {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
   .treningskalender {
     height: 80svh;
     border: none;
-    background-color: #f3f3f3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: auto;

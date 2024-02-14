@@ -8,7 +8,7 @@
       content="Velkommen til Kongsvinger IL Håndball! Her vil du få de siste nyheter og informasjon om klubben."
     />
     <meta name="keywords" content="Kongsvinger IL, KIL, handball, sports" />
-    <title>KIL | Nyehetssak</title>
+    <title>KIL | Kontakt oss</title>
     <script src="/js/index.js" type="module"></script>
     <link rel="stylesheet" href="/css/index.css" />
     <link rel="icon" type="image/png" href="/images/logo_icon.png" />
@@ -65,9 +65,9 @@
         <img
           src="/images/kil_handball_logo.png"
           alt="logo of kil_handball_logo"
-          class="specific-img logo"
+          class="specific-img"
         />
-        <div class="blog-post-text-container color-dark">
+        <div class="blog-post-text-container color-dark justified-center">
           <h1>Kontaktinformasjon for KIL Håndball</h1>
           <p>
             Vi hører gjerne fra deg! Enten du er interessert i å bli med i
@@ -103,57 +103,58 @@
             <li>Lørdag - Søndag: 10:00 - 14:00</li>
           </ul>
         </div>
-        <div class="form-container">
-          <form
-            method="GET"
-            action="/contactSuccess/index.html"
-            class="wrapper contact"
-            id="contactForm"
-          >
-            <div>
-              <label>
-                Name (required)
-                <input name="Name" id="Name" />
-              </label>
-              <div class="form-error" id="NameError">
-                <i class="fa-solid fa-triangle-exclamation"></i> Minimum 5
-                characters
+        <div class="form-bkg-clr">
+          <div class="form-container">
+            <form
+              method="GET"
+              action="/contactSuccess/index.html"
+              class="wrapper contact"
+              id="contactForm"
+            >
+              <div>
+                <label>
+                  Name (required)
+                  <input name="Name" id="Name" />
+                </label>
+                <div class="form-error" id="NameError">
+                  <i class="fa-solid fa-triangle-exclamation"></i> Minimum 5
+                  characters
+                </div>
               </div>
-            </div>
-            <div>
-              <label>
-                Phone number (minimum 8 digits)
-                <input name="phone" id="phone" />
-              </label>
-              <div class="form-error" id="phoneError">
-                <i class="fa-solid fa-triangle-exclamation"></i> Your phone
-                number must be at least 8 digits
+              <div>
+                <label>
+                  Phone number (minimum 8 digits)
+                  <input name="phone" id="phone" />
+                </label>
+                <div class="form-error" id="phoneError">
+                  <i class="fa-solid fa-triangle-exclamation"></i> Your phone
+                  number must be at least 8 digits
+                </div>
               </div>
-            </div>
-            <div>
-              <label>
-                Email (required) <input name="email" id="email" />
-              </label>
-              <div class="form-error" id="emailError">
-                <i class="fa-solid fa-triangle-exclamation"></i> Please enter a
-                valid email address
+              <div>
+                <label>
+                  Email (required) <input name="email" id="email" />
+                </label>
+                <div class="form-error" id="emailError">
+                  <i class="fa-solid fa-triangle-exclamation"></i> Please enter
+                  a valid email address
+                </div>
               </div>
-            </div>
-            <div>
-              <label>
-                Message
-                <textarea
-                  placeholder="Please write yor message here"
-                  name="story"
-                  id="story"
-                  rows="5"
-                  cols="25"
-                ></textarea>
-              </label>
-            </div>
-
-            <input type="submit" class="loadMoreBtn" value="Submit" />
-          </form>
+              <div>
+                <label>
+                  Message
+                  <textarea
+                    placeholder="Please write yor message here"
+                    name="story"
+                    id="story"
+                    rows="5"
+                    cols="25"
+                  ></textarea>
+                </label>
+              </div>
+              <input type="submit" class="loadMoreBtn" value="Submit" />
+            </form>
+          </div>
         </div>
       </div>
     </main>

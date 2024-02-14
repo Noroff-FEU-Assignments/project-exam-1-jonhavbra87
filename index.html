@@ -100,12 +100,48 @@
       <h3 class="margin-top margin-bottom font-bigger text-animation center">
         treningstider
       </h3>
-      <iframe
+      <!-- <iframe
         class="treningskalender justified-center"
         id="treningstider"
-        src="https://calendar.hoopit.io/public-calendar/a3edee39-5b25-466b-ba6c-ad436d4ccfce/"
+        src="https://calendar.hoopit.io/public-calendar/a3edee39-5b25-466b-ba6c-ad436d4ccfce/?index=[x]&venueSelectorEnabled=false&sideCalendarEnabled=false&groupSelectorEnabled=false&defaultViewType=timeGridDay"
         allow="fullscreen"
-      ></iframe>
+      >
+      </iframe> -->
+      <!-- Iframe for index 0 -->
+      <div class="flex-row gap justified-center calendar">
+        <div class="enkelkalender">
+          <h3 class="text-align-center">kuskhallen</h3>
+          <iframe
+            class="treningskalender justified-center"
+            id="treningstider0"
+            src="https://calendar.hoopit.io/public-calendar/a3edee39-5b25-466b-ba6c-ad436d4ccfce/?index=0&venueSelectorEnabled=false&sideCalendarEnabled=false&groupSelectorEnabled=false&defaultViewType=timeGridDay"
+            allow="fullscreen"
+          >
+          </iframe>
+        </div>
+        <!-- Iframe for index 1 -->
+        <div class="enkelkalender">
+          <h3 class="text-align-center">marikollen</h3>
+          <iframe
+            class="treningskalender justified-center"
+            id="treningstider1"
+            src="https://calendar.hoopit.io/public-calendar/a3edee39-5b25-466b-ba6c-ad436d4ccfce/?index=1&venueSelectorEnabled=false&sideCalendarEnabled=false&groupSelectorEnabled=false&defaultViewType=timeGridDay"
+            allow="fullscreen"
+          >
+          </iframe>
+        </div>
+        <!-- Iframe for index 2 -->
+        <div class="enkelkalender">
+          <h3 class="text-align-center">tråstadhallen</h3>
+          <iframe
+            class="treningskalender justified-center"
+            id="treningstider2"
+            src="https://calendar.hoopit.io/public-calendar/a3edee39-5b25-466b-ba6c-ad436d4ccfce/?index=2&venueSelectorEnabled=false&sideCalendarEnabled=false&groupSelectorEnabled=false&defaultViewType=timeGridDay"
+            allow="fullscreen"
+          >
+          </iframe>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="google-maps">
