@@ -4,6 +4,7 @@ body {
   background: var(--light);
   box-sizing: border-box;
   min-height: 100svh;
+
 }
 
 header {
@@ -51,10 +52,6 @@ footer {
 .center {
   left: 50%;
   transform: translateX(-50%);
-}
-
-.margin-inline {
-  margin-inline: auto;
 }
 
 .margin-top {

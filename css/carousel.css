@@ -69,17 +69,14 @@
 } */
 
 .carousel-button {
-  max-width: 60%;
-  /* bottom: 10%; */
-  /* left: 50%; */
-  /* transform: translateX(-50%); */
+  max-width: 80%;
   color: var(--light);
-  background-color: var(--cherry-red);
+  background-color: var(--red);
   border: solid;
   border-radius: 10px;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   padding: 0.7rem 1.5rem;
-  margin-bottom: 5px;
+  margin: 5px auto;
   align-self: center;
 }
 

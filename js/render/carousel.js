@@ -37,9 +37,14 @@ export function renderCarousel(postData) {
     // Adding a read more button (anchortag)
     const readMoreButton = document.createElement("a");
     readMoreButton.href = "/blogspecific/?id=" + postData.id;
-    readMoreButton.textContent = "Read More";
+    /* readMoreButton.textContent = "Read More"; */
     readMoreButton.classList.add("carousel-button");
 
+    const svgImage = document.createElement("img");
+    svgImage.src = "/images/hummelarrows.svg"; 
+    svgImage.alt = "pil for å kome til nyhten"; 
+
+    readMoreButton.append(svgImage);
 
     textContainer.append(title);
     textContainer.append(readMoreButton);

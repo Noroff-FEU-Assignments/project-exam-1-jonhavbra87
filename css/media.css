@@ -1,12 +1,16 @@
-/* @media (max-with: 40rem) */
-
 /* Hide menu items and show toggle button on smaller screens */
 
 /* @media (min-width: 1440px) {
   ha tre rader med blogposts. mobilvisning. bilde øverst og tekst under
 } */
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
+  :root {
+    --font-size-p: 1.125rem;
+    --font-size-h1: 2.25rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.75rem;
+}
   body {
     display: grid;
     grid-template-columns: 1fr 70rem 1fr;
@@ -25,7 +29,14 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 500px) and (max-width: 1024px) {
+  :root {
+    --font-size-p: 1rem;
+    --font-size-h1: 1.875rem;
+    --font-size-h2: 1.625rem;
+    --font-size-h3: 1.375rem;
+  }
+
   body {
     min-height: 200vh;
     display: grid;
@@ -38,12 +49,12 @@
     grid-row: 1;
     grid-column: auto !important;
     position: sticky;
-    left: 0;
+    top: 0;
     height: 100%;
   }
 
   .header-content {
-    align-items: end;
+    align-items: left;
     flex-direction: column;
     justify-content: start;
   }
@@ -61,13 +72,19 @@
     gap: 2rem;
     text-align: right;
     margin-top: 5rem;
+    position: fixed;
+    width: 10rem;
+    left: 0;
   }
   .navigation a {
     padding-block: 1rem;
   }
-
+  .navigation a:hover {
+    background-color: none;
+  }
   nav a.active {
     border-radius: 20px 0 0 20px;
+  
   }
   main {
     grid-row: auto !important;
@@ -99,7 +116,7 @@
 
   .blog-post-img,
   .specific-img {
-    width: 95%;
+    max-width: 60%;
     border-radius: 12px;
   }
   .calendar {
@@ -111,14 +128,16 @@
     width: 80%;
     margin: auto;
   }
-
-  /* #treningstider0,
-  #treningstider1,
-  #treningstider2 {
-  } */
 }
 
-@media (max-width: 758px) {
+@media (max-width: 500px) {
+  :root {
+    --font-size-p: 0.875rem;
+    --font-size-h1: 1.5rem;
+    --font-size-h2: 1.25rem;
+    --font-size-h3: 1.125rem;
+  }
+
   header {
     display: block;
   }
@@ -254,6 +273,7 @@
     height: 500px;
   }
 
-  .footer-info {
-  }
+  /* .footer-info {
+  } */
+
 }
