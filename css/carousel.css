@@ -88,7 +88,7 @@
   background: rgba(255, 255, 255, 0.5);
   /* box-shadow: 100px rgba(255, 255, 255, 0.5); */
   font-family: inherit;
-  color: var(--variant_of_black);
+  color: var(--black);
   border-radius: 25%;
   height: 4rem;
   width: 4rem;
@@ -118,7 +118,7 @@
 
 .dots__dot {
   border: none;
-  background-color: var(--variant_of_black);
+  background-color: var(--black);
   opacity: 0.7;
   height: 1rem;
   width: 1rem;

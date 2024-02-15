@@ -94,15 +94,46 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <div class="footer-info flex-column justified-center text-align-center">
-        <address class="margin-top">Markensvegen 20, 2212 Kongsvinger</address>
+      <div
+        class="footer-info flex-column justified-center text-align-center margin-top"
+      >
+        <form
+          id="newsletterForm"
+          class="footer-input-container"
+          action="/newslettersuccsess/index.html"
+          method="POST"
+        >
+          <label class="uppercase">
+            Få alle de siste nyhetene om KIL håndball
+            <input
+              type="email"
+              name="email"
+              id="emailSignup"
+              placeholder="Email"
+              required
+            />
+          </label>
+          <div class="form-error" id="emailError">
+            <i class="fa-solid fa-triangle-exclamation"></i> Please enter a
+            valid email address
+          </div>
+          <p class="form--disclaimer">
+            Abonner for å få de siste nyhetene om KIL håndball
+          </p>
+          <input
+            type="submit"
+            class="footer-button uppercase"
+            value="Abonner"
+          />
+        </form>
         <div class="gap padding color-light justified-center social-media">
+          <h3>følg oss på</h3>
           <i class="fa-brands fa-square-facebook"></i>
           <i class="fa-brands fa-square-instagram"></i>
           <i class="fa-brands fa-square-x-twitter"></i>
           <i class="fa-brands fa-square-snapchat"></i>
         </div>
-        </div>
+        <address class="margin-top">Markensvegen 20, 2212 Kongsvinger</address>
       </div>
     </footer>
   </body>

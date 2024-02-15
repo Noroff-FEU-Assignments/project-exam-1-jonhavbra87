@@ -3,6 +3,7 @@ const NameError = document.querySelector("#NameError");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
 const phone = document.querySelector("#phone");
+const emailSignup = document.querySelector("#emailSignup");
 
 function NameValidator() {
     if (checkLength(Name.value, 4) === true) {
@@ -34,6 +35,21 @@ function NameValidator() {
     }
   }
   
+
+
+
+function emailSignUpValidator() {
+  if (validateEmail(emailSignup.value)) {
+    emailError.style.display = "none";
+    emailSignup.classList.remove("input-error");
+    return true;
+  } else {
+    emailError.style.display = "block";
+    emailSignup.classList.add("input-error");
+    return false;
+  }
+}
+
   //Function that makes the user get a error one at a time:
   // export function formValidator(event) {
   //   if (
@@ -50,8 +66,9 @@ export function formValidator(event) {
     const Name = NameValidator(); 
     const phoneNumber = phoneNumberValidator(); 
     const email = emailValidator(); 
+    const signUpEmail = emailSignUpValidator();
 
-    if (!Name || !phoneNumber || !email){
+    if (!Name || !phoneNumber || !email || !signUpEmail){
         event.preventDefault(); 
     }
 }

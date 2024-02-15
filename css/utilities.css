@@ -82,7 +82,7 @@ footer {
 }
 
 .color-dark {
-  color: var(--variant_of_black);
+  color: var(--black);
 }
 
 .hidden {
