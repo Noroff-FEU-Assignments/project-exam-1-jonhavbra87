@@ -57,6 +57,11 @@ footer {
   transform: translateX(-50%);
 }
 
+.page-content {
+  max-width: 70rem;
+  margin: 2rem auto;
+}
+
 .margin-top {
   margin-top: 2rem;
 }
@@ -122,10 +127,18 @@ footer {
   text-transform: uppercase;
 }
 
+.font-weight-600 {
+  font-weight: 600;
+}
+
 .font-weight-700 {
   font-weight: 700;
 }
 
 .word-wrapping {
   text-wrap: balance;
+}
+
+.letter-spacing {
+  letter-spacing: 3px;
 }

@@ -90,18 +90,18 @@ nav a.active {
 }
 
 /* Text-styling */
-h1,
+/* h1,
 h2,
 h3 {
   text-transform: uppercase;
   margin-top: 10px;
-}
+} */
 
 .branding {
   font-weight: 500;
   font-style: italic;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin: 10px 0;
 }
 
 /* Hero-styling */
@@ -178,21 +178,46 @@ iframe.map {
   background: var(--alertbackground);
 }
 
+/* ---------------------------------------------- */
+/* Page content */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.contact-adress {
+  padding: var(--padding);
+}
+.name {
+  font-weight: 600;
+}
+
 /* Blog posts */
 .blog-posts,
 .blog-details {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   grid-gap: 30px;
+  justify-content: center;
+  max-width: 70rem;
+  margin: 0 auto;
 }
 
 .blog-post-container {
   display: flex;
+  flex-wrap: wrap;
+  max-height: 550px;
+  width: 100%;
+  margin: 0 auto;
   background-color: var(--black);
   border-radius: 12px;
   padding: 3px;
   margin: 0 auto;
   margin-bottom: var(--padding);
+  /* overflow: hidden; */
+  max-width: 30rem;
 }
 
 .blog-post-specific {
@@ -205,32 +230,41 @@ iframe.map {
 }
 
 .blog-post-img {
-  width: 15rem;
+  height: 250px;
+  width: auto;
   border-radius: 12px 0 0 12px;
   object-fit: cover;
 }
 
+.blog-post-img {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
 .blog-post-text-container {
   color: var(--light);
-  padding: 2rem;
-  border-left: solid 5px var(--red);
-  font-size: 1.2rem;
+  /* padding: 2rem; */
+  border-top: solid 3px var(--red);
   width: 100%;
-  line-height: 1.5;
-  word-spacing: 1px;
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 10px;
+  /* line-height: 1.5; */
 }
 
 .blog-post-title {
   margin-bottom: 10px;
-  /* word-wrap: break-word;
-  word-break: break-all; */
-  hyphens: auto;
+  word-wrap: break-word;
+  /* word-break: break-all; */
+  hyphens: manual;
 }
 
 .specific-img {
   width: 60%;
   margin: 0 auto;
   border-radius: 15px;
+  display: block;
 }
 
 .blog-post-preamble {
@@ -278,7 +312,7 @@ i {
 .social-media {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 1rem;
   margin: 1rem auto;
 }
 
@@ -327,7 +361,6 @@ li {
 /* ----------------------------------- */
 /* The loader is from https://uiverse.io/felipesntr/yellow-robin-29 */
 
-.input-button,
 .loadMoreBtn {
   margin-top: 20px;
   font-size: 0.8rem;
@@ -343,7 +376,6 @@ li {
   cursor: pointer;
 }
 
-.input-button::after,
 .loadMoreBtn::after {
   content: "";
   position: absolute;
@@ -356,7 +388,6 @@ li {
   transform-origin: center;
 }
 
-.input-button::before,
 .loadMoreBtn::before {
   content: "";
   transform-origin: center;
@@ -369,13 +400,11 @@ li {
   transition: 0.5s;
 }
 
-.input-button:hover::before,
 .loadMoreBtn:hover::before,
 button:hover::after {
   transform: scale(0);
 }
 
-.input-button:hover,
 .loadMoreBtn:hover {
   box-shadow: inset 0px 0px 10px var(--red);
 }
@@ -383,22 +412,12 @@ button:hover::after {
 /* ----------------------------------- */
 
 /* Form */
-.contact-page-container {
-  margin: 0 auto;
-}
 
-.login-container,
 .form-container {
-  max-width: 544px;
   width: 100%;
   margin: 0 auto;
   padding: var(--padding);
-  background-color: var(--light);
-  color: var(--primary);
-}
-
-.login-container {
-  max-width: 300px;
+  margin-top: 40px;
 }
 
 form div {
@@ -407,10 +426,9 @@ form div {
 
 input,
 textarea {
-  border: solid;
+  border: 2px solid;
   border-radius: 5px;
   display: block;
-  font-size: 1rem;
   padding: var(--padding);
   width: 100%;
   cursor: text;
@@ -446,21 +464,15 @@ textarea:focus {
   color: var(--alert);
 }
 
-/* ----------------------------------- */
 /* Footer form */
-.footer-input-container {
-}
 
-#emailSignup {
-  width: 60%;
-  margin: 0 auto;
-}
 .form--disclaimer {
   font-size: smaller;
   color: #575757;
   margin-top: 6px;
 }
 
+.form-button,
 .footer-button {
   background-color: var(--light);
   color: var(--black);
@@ -473,6 +485,16 @@ textarea:focus {
   width: 30%;
 }
 
+.form-button {
+  background-color: var(--black);
+  color: var(--light);
+  width: 50%;
+}
+
+.input-email {
+  width: 60%;
+  margin: 0 auto;
+}
 .address {
   padding: 2rem;
 }

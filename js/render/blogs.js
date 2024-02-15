@@ -27,7 +27,7 @@ export function renderBlogs(postData) {
 
     // Creating a container for the text elements
     const textContainer = document.createElement("div");
-    textContainer.classList.add("blog-post-text-container", "flex-column");
+    textContainer.classList.add("blog-post-text-container");
 
     // Adding the title
     const title = document.createElement("h3");
@@ -51,8 +51,8 @@ export function renderBlogs(postData) {
     // Adding a read more button
     const readMoreButton = document.createElement("a");
     readMoreButton.href = "/blogspecific/?id=" + postData.id;
-    readMoreButton.textContent = "Read More";
-    readMoreButton.classList.add("blog-post-button");
+    readMoreButton.textContent = "Les mer";
+    readMoreButton.classList.add("blog-post-button", "font-weight-600", "uppercase", "letter-spacing");
     textContainer.append(readMoreButton);
 
     // Appending the text container to the blog post container

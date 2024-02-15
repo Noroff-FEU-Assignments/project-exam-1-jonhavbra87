@@ -28,13 +28,14 @@ body {
 header,
 footer {
   font-family: "DM Sans", sans-serif;
-
 }
 
 h1,
 h2,
 h3 {
   font-family: "DM Mono", monospace;
+  text-transform: uppercase;
+  margin-top: 10px;
 }
 
 h1 {
@@ -47,4 +48,9 @@ h2 {
 
 h2 {
   font-size: var(--font-size-h2);
+}
+
+p {
+  font-size: var(--font-size-p);
+  width: 95%;
 }

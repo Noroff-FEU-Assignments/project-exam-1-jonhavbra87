@@ -8,7 +8,7 @@
   :root {
     --font-size-p: 1.125rem;
     --font-size-h1: 2.25rem;
-    --font-size-h2: 2rem;
+    --font-size-h2: 1.9rem;
     --font-size-h3: 1.75rem;
   }
   body {
@@ -26,6 +26,10 @@
   }
   .navigation a:hover {
     border-radius: 10px 10px 0 0;
+  }
+  .text-container {
+    border-left: solid 3px var(--red);
+    padding-left: 2rem;
   }
 }
 
@@ -94,6 +98,10 @@
     min-width: calc(100vw - 10rem);
   }
 
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
   .blog-posts {
     display: flex;
     flex-wrap: wrap;
@@ -113,8 +121,7 @@
     margin: 0 auto;
   }
 
-  .blog-post-img,
-  .specific-img {
+  .blog-post-img {
     max-width: 60%;
     border-radius: 12px;
   }
@@ -126,6 +133,10 @@
   .enkelkalender {
     width: 80%;
     margin: auto;
+  }
+  .text-container {
+    border-top: solid 3px var(--red);
+    padding-left: 2rem;
   }
 }
 
@@ -208,6 +219,18 @@
     padding: 0;
   }
 
+  .text-container {
+    border-left: none;
+    border-top: 5px solid var(--red);
+    margin-top: 0 !important;
+    padding: 0 10px;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+  }
+
   /* Carousel */
   .slider {
     height: 60svh !important;
@@ -216,11 +239,11 @@
   /* Blog-posts styling */
   .blog-posts,
   .blog-details {
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     flex-direction: column;
   }
-
+  /* 
   .blog-post-container,
   .blog-post-specific {
     flex-wrap: wrap;
@@ -230,14 +253,17 @@
   }
 
   .blog-post-img,
-  .specific-img {
-    width: 100%;
+ 
     border-radius: 12px 12px 0 0;
+  } */
+
+  .specific-img {
+    width: 90%;
   }
 
   .blog-post-text-container {
-    border-top: solid 3px var(--red);
     border-left: none;
+
     font-size: 1.1rem;
   }
 
@@ -260,6 +286,7 @@
     flex-wrap: wrap;
     margin: 0 auto;
   }
+
   .treningskalender {
     height: 80svh;
     border: none;
@@ -280,4 +307,10 @@
 
   /* .footer-info {
   } */
+}
+
+@media (max-width: 500px) {
+  .social-media {
+    flex-wrap: wrap;
+  }
 }
