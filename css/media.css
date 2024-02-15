@@ -195,6 +195,7 @@
 
   .fa-bars,
   .fa-xmark {
+    font-size: var(--font-size-h1);
     transition: opacity 0.3s ease-out;
     opacity: 1;
   }
@@ -274,7 +275,7 @@
 
   footer {
     flex-direction: column;
-    height: 500px;
+    /* height: 100%; */
   }
 
   /* .footer-info {

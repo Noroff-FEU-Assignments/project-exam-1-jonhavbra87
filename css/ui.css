@@ -222,8 +222,8 @@ iframe.map {
 
 .blog-post-title {
   margin-bottom: 10px;
-  word-wrap: break-word;
-  word-break: break-all;
+  /* word-wrap: break-word;
+  word-break: break-all; */
   hyphens: auto;
 }
 
@@ -386,14 +386,6 @@ button:hover::after {
 .contact-page-container {
   margin: 0 auto;
 }
-/* .form-bkg-clr {
-  background-color: var(--red);
-  padding: 3rem 2rem;
-  border: 1px solid var(--black);
-  border-radius: 15px 15px 0 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  margin-bottom: 40px;
-} */
 
 .login-container,
 .form-container {
@@ -454,7 +446,6 @@ textarea:focus {
   color: var(--alert);
 }
 
-
 /* ----------------------------------- */
 /* Footer form */
 .footer-input-container {
@@ -473,9 +464,8 @@ textarea:focus {
 .footer-button {
   background-color: var(--light);
   color: var(--black);
-  /* display: inline-block; */
   border-radius: 10px;
-  padding: 0.7rem 1.5rem;
+  /* padding: 0.7rem 1.5rem; */
   margin: 10px auto;
   text-align: center;
   font-weight: 600;
@@ -483,6 +473,9 @@ textarea:focus {
   width: 30%;
 }
 
+.address {
+  padding: 2rem;
+}
 /* ----------------------------------- */
 /* Error handling */
 .error-message {

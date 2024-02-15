@@ -125,3 +125,7 @@ footer {
 .font-weight-700 {
   font-weight: 700;
 }
+
+.word-wrapping {
+  text-wrap: balance;
+}

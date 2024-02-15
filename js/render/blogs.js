@@ -32,7 +32,7 @@ export function renderBlogs(postData) {
     // Adding the title
     const title = document.createElement("h3");
     title.textContent = postData.title.rendered;
-    title.classList.add("blog-post-title");
+    title.classList.add("blog-post-title", "word-wrapping");
     textContainer.append(title);
 
     // Adding the text excerpt
