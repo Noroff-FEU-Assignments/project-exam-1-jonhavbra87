@@ -106,7 +106,7 @@
             <li>Lørdag - Søndag: 10:00 - 14:00</li>
           </ul>
         </div>
-        <div class="form-bkg-clr">
+        <div class="form-bkg-clr margin-bottom">
           <div class="form-container">
             <form
               method="GET"
@@ -173,12 +173,35 @@
         ></iframe>
       </div>
       <div class="footer-info flex-column justified-center text-align-center">
-        <address class="margin-top">Markensvegen 20, 2212 Kongsvinger</address>
-        <div class="gap padding color-light justified-center social-media">
-          <i class="fa-brands fa-square-facebook"></i>
-          <i class="fa-brands fa-square-instagram"></i>
-          <i class="fa-brands fa-square-x-twitter"></i>
-          <i class="fa-brands fa-square-snapchat"></i>
+        <div class="footer-input-container">
+          <label class="uppercase">
+            Få alle de siste nyhetene om KIL håndball<input
+              name="email"
+              id="emailSignup"
+              placeholder="Email"
+              type="text"
+            />
+          </label>
+          <div class="form-error" id="emailError">
+            <i class="fa-solid fa-triangle-exclamation"></i> Please enter
+            a valid email address
+          </div>
+
+          
+          <p class="form--disclaimer">
+            Abonner for å få de siste nyhetene om KIL håndball
+          </p>
+          <input type="submit" class="footer-button uppercase">Abonner</input>
+          <div class="gap padding color-light justified-center social-media">
+            <p class="uppercase font-weight-700">følg oss på</p>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
+            <i class="fa-brands fa-square-snapchat"></i>
+          </div>
+          <address class="margin-top">
+            Markensvegen 20, 2212 Kongsvinger
+          </address>
         </div>
       </div>
     </footer>

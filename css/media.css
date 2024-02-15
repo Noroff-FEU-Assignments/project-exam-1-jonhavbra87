@@ -10,7 +10,7 @@
     --font-size-h1: 2.25rem;
     --font-size-h2: 2rem;
     --font-size-h3: 1.75rem;
-}
+  }
   body {
     display: grid;
     grid-template-columns: 1fr 70rem 1fr;
@@ -84,7 +84,6 @@
   }
   nav a.active {
     border-radius: 20px 0 0 20px;
-  
   }
   main {
     grid-row: auto !important;
@@ -268,6 +267,11 @@
     overflow: auto;
   }
 
+  .modalContent {
+    max-width: 50%;
+    max-height: 50%;
+  }
+
   footer {
     flex-direction: column;
     height: 500px;
@@ -275,5 +279,4 @@
 
   /* .footer-info {
   } */
-
 }

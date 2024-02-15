@@ -4,7 +4,6 @@ body {
   background: var(--light);
   box-sizing: border-box;
   min-height: 100svh;
-
 }
 
 header {
@@ -39,6 +38,10 @@ footer {
 
 .flex-row {
   flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .justified-center {
@@ -109,4 +112,16 @@ footer {
 
 .background-red {
   background-color: var(--red);
+}
+
+.max-width {
+  max-width: 25rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.font-weight-700 {
+  font-weight: 700;
 }

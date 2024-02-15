@@ -424,7 +424,7 @@ textarea {
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.01);
     will-change: transform;
   }
 }
@@ -460,7 +460,33 @@ textarea:focus {
 }
 
 /* ----------------------------------- */
+/* Footer form */
+.footer-input-container {
+}
 
+#emailSignup {
+  width: 70%;
+  margin: 0 auto;
+}
+.form--disclaimer {
+  font-size: smaller;
+  color: #575757;
+  margin-top: 6px;
+}
+
+.footer-button {
+  background-color: var(--light);
+  color: var(--variant_of_black);
+  display: inline-block;
+  border-radius: 10px;
+  padding: 0.7rem 1.5rem;
+  margin: 10px auto;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ----------------------------------- */
 /* Error handling */
 .error-message {
   border: 1px solid var(--alert);
