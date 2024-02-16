@@ -38,8 +38,37 @@
     </script>
   </head>
   <body>
+    <header>
+      <div class="header-content">
+        <div class="header-logo">
+          <a href="/"
+            ><img
+              src="/images/kil_handball_logo.png"
+              alt="logo of kil_handball_logo"
+          /></a>
+        </div>
+        <nav id="main-nav">
+          <button id="menu-toggle" class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark" style="display: none"></i>
+          </button>
+          <ul class="navigation flex">
+            <li><a href="/" class="active">hjem</a></li>
+            <li><a href="/blogs/">nyheter</a></li>
+            <li><a href="/about/">om oss</a></li>
+            <li><a href="/contact/">kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
     <main>
-      <h1>tusen takk for ditt abonnement!</h1>
+      <div class="page-content">
+        <div class="padding text-container">
+          <h1>tusen takk for ditt engasjement!</h1>
+          <p>Du vil nå bli tatt tilbake til hjemmesiden</p>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="google-maps">
@@ -59,7 +88,7 @@
           id="newsletterForm"
           class="footer-input-container"
           action="/newslettersuccsess/index.html"
-          method="POST"
+          method="GET"
         >
           <label class="uppercase">
             siste nyheter?

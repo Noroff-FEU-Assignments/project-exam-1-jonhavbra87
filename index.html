@@ -63,71 +63,73 @@
     </header>
 
     <main>
-      <div class="hero-banner justified-center text-align-center">
-        <div class="hero-content flex-column padding color-light">
-          <h1>velkommen til kil håndball</h1>
-          <p class="branding margin-top">
-            sammen skaper vi idrettsglede og bygger karakter!
-          </p>
+      <div class="page-content">
+        <div class="hero-banner justified-center text-align-center">
+          <div class="hero-content flex-column padding color-light">
+            <h1>velkommen til kil håndball</h1>
+            <p class="branding margin-top">
+              sammen skaper vi idrettsglede og bygger karakter!
+            </p>
+          </div>
         </div>
-      </div>
-      <h2 class="margin-top margin-bottom text-animation center">nyheter</h2>
-      <div class="slider">
-        <div class="lds-spinner center">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <h2 class="margin-top margin-bottom text-animation center">nyheter</h2>
+        <div class="slider">
+          <div class="lds-spinner center">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <button class="slider__btn slider__btn--left">
+            <img src="images/arrow-left.svg" alt="arrow pointing left" />
+          </button>
+          <button class="slider__btn slider__btn--right">
+            <img src="images/arrow-right.svg" alt="arrow pointing right" />
+          </button>
         </div>
-        <button class="slider__btn slider__btn--left">
-          <img src="images/arrow-left.svg" alt="arrow pointing left" />
-        </button>
-        <button class="slider__btn slider__btn--right">
-          <img src="images/arrow-right.svg" alt="arrow pointing right" />
-        </button>
-      </div>
-      <div class="dots justified-center"></div>
-      <h2 class="margin-top margin-bottom text-animation center">
-        treningstider
-      </h2>
-      <div class="flex-row gap justified-center calendar margin-bottom">
-        <div class="enkelkalender">
-          <h3 class="text-align-center">kuskhallen</h3>
-          <iframe
-            class="treningskalender justified-center"
-            id="treningstider0"
-            src="https://calendar.hoopit.io/public-calendar/a3edee39-5b25-466b-ba6c-ad436d4ccfce/?index=0&venueSelectorEnabled=false&sideCalendarEnabled=false&groupSelectorEnabled=false&defaultViewType=timeGridDay"
-            allow="fullscreen"
-          >
-          </iframe>
-        </div>
-        <div class="enkelkalender">
-          <h3 class="text-align-center">marikollen</h3>
-          <iframe
-            class="treningskalender justified-center"
-            id="treningstider1"
-            src="https://calendar.hoopit.io/public-calendar/a3edee39-5b25-466b-ba6c-ad436d4ccfce/?index=1&venueSelectorEnabled=false&sideCalendarEnabled=false&groupSelectorEnabled=false&defaultViewType=timeGridDay"
-            allow="fullscreen"
-          >
-          </iframe>
-        </div>
-        <div class="enkelkalender">
-          <h3 class="text-align-center">tråstadhallen</h3>
-          <iframe
-            class="treningskalender justified-center"
-            id="treningstider2"
-            src="https://calendar.hoopit.io/public-calendar/a3edee39-5b25-466b-ba6c-ad436d4ccfce/?index=2&venueSelectorEnabled=false&sideCalendarEnabled=false&groupSelectorEnabled=false&defaultViewType=timeGridDay"
-            allow="fullscreen"
-          >
-          </iframe>
+        <div class="dots justified-center"></div>
+        <h2 class="margin-top margin-bottom text-animation center">
+          treningstider
+        </h2>
+        <div class="calendar margin-bottom">
+          <div class="enkelkalender">
+            <h3 class="text-align-center">kuskhallen</h3>
+            <iframe
+              class="treningskalender"
+              id="treningstider0"
+              src="https://calendar.hoopit.io/public-calendar/a3edee39-5b25-466b-ba6c-ad436d4ccfce/?index=0&venueSelectorEnabled=false&sideCalendarEnabled=false&groupSelectorEnabled=false&defaultViewType=timeGridDay"
+              allow="fullscreen"
+            >
+            </iframe>
+          </div>
+          <div class="enkelkalender">
+            <h3 class="text-align-center">marikollen</h3>
+            <iframe
+              class="treningskalender"
+              id="treningstider1"
+              src="https://calendar.hoopit.io/public-calendar/a3edee39-5b25-466b-ba6c-ad436d4ccfce/?index=1&venueSelectorEnabled=false&sideCalendarEnabled=false&groupSelectorEnabled=false&defaultViewType=timeGridDay"
+              allow="fullscreen"
+            >
+            </iframe>
+          </div>
+          <div class="enkelkalender">
+            <h3 class="text-align-center">tråstadhallen</h3>
+            <iframe
+              class="treningskalender"
+              id="treningstider2"
+              src="https://calendar.hoopit.io/public-calendar/a3edee39-5b25-466b-ba6c-ad436d4ccfce/?index=2&venueSelectorEnabled=false&sideCalendarEnabled=false&groupSelectorEnabled=false&defaultViewType=timeGridDay"
+              allow="fullscreen"
+            >
+            </iframe>
+          </div>
         </div>
       </div>
     </main>
@@ -149,7 +151,7 @@
           id="newsletterForm"
           class="footer-input-container"
           action="/newslettersuccsess/index.html"
-          method="POST"
+          method="GET"
         >
           <label class="uppercase">
             siste nyheter?

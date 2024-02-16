@@ -1,5 +1,6 @@
-/* Carousel styling */
-/* SLIDER */
+/* --------------------------- CAROUSEL ---------------------------  */
+
+/* ----------------- Slider Styling ----------------- */
 .slider {
   max-width: 65rem;
   width: 90%;
@@ -24,6 +25,7 @@
   transition: transform 1s;
 }
 
+/* ----------------- Content Styling ----------------- */
 .inner-container {
   position: relative;
   width: 100%;
@@ -58,16 +60,6 @@
   font-weight: 600;
 }
 
-/* .carousel-title {
-  font-size: 1.5rem;
-  bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--light);
-  width: 100%;
-  text-align: center;
-} */
-
 .carousel-button {
   max-width: 80%;
   color: var(--light);
@@ -86,7 +78,6 @@
   z-index: 10;
   border: none;
   background: rgba(255, 255, 255, 0.5);
-  /* box-shadow: 100px rgba(255, 255, 255, 0.5); */
   font-family: inherit;
   color: var(--black);
   border-radius: 25%;
@@ -109,6 +100,7 @@
   transform: translate(50%, -50%);
 }
 
+/* ----------------- Dots Styling ----------------- */
 .dots {
   margin: 0 auto;
   display: flex;
@@ -131,7 +123,6 @@
 .dots__dot:hover,
 .dots__dot:focus {
   opacity: 1;
-  /* other styles for hover and focus state */
 }
 
 .dots__dot:last-child {
@@ -139,7 +130,6 @@
 }
 
 .dots__dot--active {
-  /* background-color: #fff; */
   background-color: var(--cherry-red);
   opacity: 1;
 }

@@ -5,7 +5,6 @@ export async function loadMorePosts() {
     // Wait for the DOM to update
     setTimeout(async () => {
         const loadMoreBtn = document.getElementById('loadMoreBtn');
-        console.log(loadMoreBtn);
 
         if (loadMoreBtn) {
             loadMoreBtn.addEventListener('click', async () => {

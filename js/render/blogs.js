@@ -25,7 +25,6 @@ export function renderBlogs(postData) {
         postContainer.append(img);
     }
 
-    // Creating a container for the text elements
     const textContainer = document.createElement("div");
     textContainer.classList.add("blog-post-text-container");
 
@@ -55,9 +54,8 @@ export function renderBlogs(postData) {
     readMoreButton.classList.add("blog-post-button", "font-weight-600", "uppercase", "letter-spacing");
     textContainer.append(readMoreButton);
 
-    // Appending the text container to the blog post container
-    postContainer.append(textContainer);
 
-    // Appending the blog post container to the main blog container
+    postContainer.append(textContainer);
+    
     blogContainer.append(postContainer);
 }

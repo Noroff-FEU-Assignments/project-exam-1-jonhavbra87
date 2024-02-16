@@ -1,4 +1,4 @@
-/* colors, fonts soft touches, Typography */
+/* --------------------------- THEME ---------------------------  */
 :root {
   --padding: 1rem;
   --red: #cd0010;
@@ -8,9 +8,11 @@
   --black: #181414;
   --alert: red;
 }
+
 * {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -52,5 +54,4 @@ h2 {
 
 p {
   font-size: var(--font-size-p);
-  width: 95%;
 }

@@ -1,3 +1,5 @@
+import { imageModal } from "../ui/modal.js"
+
 const loader = document.querySelector(".lds-spinner");
 
 export function renderBlog(specificData) {
@@ -12,7 +14,7 @@ export function renderBlog(specificData) {
 	}
 	// Creating the container for each blog post
 	const postContainer = document.createElement("div");
-	postContainer.classList.add("blog-post-specific", "justified-center", "flex-column", "margin-top");
+	postContainer.classList.add("blog-post-specific");
 
 	// Adding the featured image if it is available
 	const featuredMedia =
@@ -28,7 +30,7 @@ export function renderBlog(specificData) {
 
 	// Creating a container for the text elements
 	const textContainer = document.createElement("div");
-	textContainer.classList.add("blog-post-text-container", "color-dark");
+	textContainer.classList.add("text-container");
 
 	// Adding the title
 	const title = document.createElement("h3");
@@ -39,7 +41,7 @@ export function renderBlog(specificData) {
 	// Adding the text content
 	const content = document.createElement("p");
 	content.innerHTML = specificData.content.rendered;
-	content.classList.add("blog-post-preamble", "margin-bottom");
+	content.classList.add("margin-bottom");
 	textContainer.append(content);
 
 	// Adding the date
@@ -59,30 +61,7 @@ export function renderBlog(specificData) {
 
 	blogContainer.append(postContainer);
 
-
-	postContainer.querySelectorAll(".specific-img").forEach((img) => {
-		img.style.cursor = "pointer";
-		img.addEventListener("click", function () {
-		  const modal = document.getElementById("imageModal");
-		  const modalImg = document.getElementById("modalImage");
-		  modal.style.display = "flex";
-		  modalImg.src = this.src;
-		});
-	});
-
-	const modal = document.getElementById("imageModal");
-	const span = document.getElementsByClassName("close")[0];
-	
-
-		span.onclick = function () {
-			modal.style.display = "none";
-		  };
-		  
-		  window.onclick = function (event) {
-			if (event.target == modal) {
-			  modal.style.display = "none";
-			}
-		  };
-
-		  document.title = `KIL | ${specificData.title.rendered}`;
+	imageModal();
+  	
+	document.title = `KIL | ${specificData.title.rendered}`;
 }

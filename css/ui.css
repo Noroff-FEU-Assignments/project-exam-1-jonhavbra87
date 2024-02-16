@@ -1,17 +1,6 @@
-/* Header, Footer, navigation, alerts, pop ups */
+/* --------------------------- USER INTERFERENCE ---------------------------  */
 
-header {
-  background-color: var(--red);
-  text-transform: uppercase;
-  height: 100px;
-  /* flex-wrap: wrap; */
-  /* display: flex;
-  flex-direction: column; */
-  /* gap: 10rem; */
-  width: 100%;
-  justify-content: center;
-  /* display: flex; */
-}
+/* ----------------- Header Styling ----------------- */
 
 .header-content {
   align-items: end;
@@ -30,30 +19,7 @@ header {
   height: 75px;
 }
 
-/* .header-logo:hover img {
-  opacity: 0.8;
-} */
-
-main {
-  margin: 0 auto;
-}
-
-footer {
-  /* align-items: center;
-  justify-content: center; */
-
-  background-color: var(--black);
-  color: var(--light);
-  display: flex;
-  /* flex-wrap: wrap; */
-  /* flex-direction: column; */
-}
-
-/* Navigation styling */
-#main-nav {
-  /* display: flex; */
-  /* justify-content: space-evenly; */
-}
+/* ----------------- Navigation Styling ----------------- */
 
 .navigation {
   list-style: none;
@@ -85,17 +51,12 @@ nav a.active {
   border-radius: 10px 10px 0 0;
   font-weight: 600;
 }
+
 .menu-toggle {
   display: none;
 }
 
-/* Text-styling */
-/* h1,
-h2,
-h3 {
-  text-transform: uppercase;
-  margin-top: 10px;
-} */
+/* ----------------- Text Styling ----------------- */
 
 .branding {
   font-weight: 500;
@@ -104,7 +65,7 @@ h3 {
   margin: 10px 0;
 }
 
-/* Hero-styling */
+/* ----------------- Hero Styling ----------------- */
 .hero-banner {
   position: relative;
   min-height: 40rem;
@@ -134,24 +95,19 @@ h3 {
 .hero-content {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-direction: row;
   height: 100%;
 }
 
-/* Calendar-styling */
+/* ----------------- Calendar Styling ----------------- */
 .calendar {
+  display: flex;
+  flex-direction: row;
   margin: 0 auto;
-  justify-content: space-evenly;
-}
-.enkelkalender {
-  width: 25rem;
+  justify-content: space-between;
 }
 
-#treningstider0,
-#treningstider1,
-#treningstider2 {
-  width: 100%;
+.enkelkalender {
+  gap: 10px;
 }
 
 .treningskalender {
@@ -178,8 +134,8 @@ iframe.map {
   background: var(--alertbackground);
 }
 
-/* ---------------------------------------------- */
-/* Page content */
+/* ----------------- Page content --------------------------- */
+
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -193,30 +149,30 @@ iframe.map {
   font-weight: 600;
 }
 
-/* Blog posts */
+/* ----------------- Blog posts ---------------------------- */
+
 .blog-posts,
 .blog-details {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  grid-gap: 30px;
-  justify-content: center;
+  justify-content: space-evenly;
   max-width: 70rem;
   margin: 0 auto;
+  padding: 10px;
 }
 
 .blog-post-container {
   display: flex;
   flex-wrap: wrap;
-  max-height: 550px;
-  width: 100%;
+  max-height: auto;
+  width: 20rem;
   margin: 0 auto;
   background-color: var(--black);
   border-radius: 12px;
   padding: 3px;
   margin: 0 auto;
   margin-bottom: var(--padding);
-  /* overflow: hidden; */
   max-width: 30rem;
 }
 
@@ -240,23 +196,21 @@ iframe.map {
   width: 100%;
   border-radius: 12px 12px 0 0;
 }
+
 .blog-post-text-container {
   color: var(--light);
-  /* padding: 2rem; */
   border-top: solid 3px var(--red);
   width: 100%;
-  height: 175px;
+  height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0 10px;
-  /* line-height: 1.5; */
 }
 
 .blog-post-title {
   margin-bottom: 10px;
   word-wrap: break-word;
-  /* word-break: break-all; */
   hyphens: manual;
 }
 
@@ -268,38 +222,31 @@ iframe.map {
 }
 
 .blog-post-preamble {
-  font-size: 1.3rem;
+  font-style: italic;
 }
 
 .blog-post-date {
-  font-size: 0.9rem;
+  font-size: calc(var(--font-size-p) * 0.8);
   margin-top: 10px;
   text-align: left;
 }
 
 .blog-post-button {
-  width: 50%;
   background-color: var(--light);
   color: var(--black);
-  display: block;
   border-radius: 10px;
-  padding: 0.7rem 1.5rem;
-  margin-bottom: 5px;
+  padding: 0.5rem 1rem;
   align-self: end;
-  justify-content: center;
-  align-items: right;
   text-align: center;
-  font-weight: 400;
 }
 
 .blog-post-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 0px 15px var(--light);
-  /*   background-color: var(--black);
-  color: var(--light); */
+  transform: scale(1.01);
+  box-shadow: 0px 0px 8px var(--light);
 }
 
 /* -------------Little things------------- */
+
 .logo {
   max-width: 30%;
 }
@@ -324,8 +271,12 @@ li {
   list-style: none;
 }
 
-/* ----------------------------------- */
-/* Modal Styling */
+dt {
+  font-weight: 500;
+}
+
+/* ----------------- Modal Styling ----------------- */
+
 .modal {
   display: none;
   position: fixed;
@@ -340,11 +291,9 @@ li {
   align-items: center;
 }
 
-.modalContent {
+.modal-content {
   margin: auto;
   display: block;
-  max-width: 60%;
-  max-height: 40vh;
   object-fit: contain;
 }
 
@@ -352,8 +301,8 @@ li {
   position: absolute;
   top: 30px;
   right: 35px;
-  color: #ffffff;
-  font-size: 40px;
+  color: var(--light);
+  font-size: var(--font-size-h1);
   font-weight: 800;
   cursor: pointer;
 }

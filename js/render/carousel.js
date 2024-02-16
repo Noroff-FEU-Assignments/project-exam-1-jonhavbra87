@@ -10,11 +10,9 @@ export function renderCarousel(postData) {
         return;
     }
 
-    
     // Creating the container for each blog post
     const postContainer = document.createElement("div");
     postContainer.classList.add("slide");
-
 
     // Adding the featured image if available
     const featuredMedia = postData._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
@@ -37,7 +35,6 @@ export function renderCarousel(postData) {
     // Adding a read more button (anchortag)
     const readMoreButton = document.createElement("a");
     readMoreButton.href = "/blogspecific/?id=" + postData.id;
-    /* readMoreButton.textContent = "Read More"; */
     readMoreButton.classList.add("carousel-button");
 
     const svgImage = document.createElement("img");

@@ -51,7 +51,7 @@ const slider = function () {
       console.log("prev slide is clicked", curSlide);
     };
 
-  //Previous slide
+    //Previous slide
     const prevSlide = function () {
       if (curSlide === 0) {
         curSlide = maxSlide - 1;

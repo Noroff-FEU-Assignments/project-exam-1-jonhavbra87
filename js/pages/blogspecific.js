@@ -11,13 +11,12 @@ export async function blogSpecificPage() {
 
 		const url = new URL(location.href);
 		let id = url.searchParams.get("id");
-		// console.log(id);
 
 		const post = await getBlog(id);
-		
-		//console.log(post);
+
 
 		renderBlog(post);
+		
 	} catch (error) {
 		//Developer console log
 		console.log("Unable to fetch api", error);

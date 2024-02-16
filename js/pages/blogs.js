@@ -14,7 +14,7 @@ export function setCurrentPage(page) {
     currentPage = page;
 }
 
-const perPage = 10;
+const perPage = 9;
 
 export async function blogsPage() {
     try {
@@ -36,7 +36,7 @@ export async function blogsPage() {
                 errorMessage.innerHTML = displayError("render-error", "Error rendering blog post.");
             }
         });
-        // console.log(posts);
+
     } catch (fetchError) {
         console.error("Error fetching blogs: ", fetchError);
         // // User display

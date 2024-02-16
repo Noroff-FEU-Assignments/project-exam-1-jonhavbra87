@@ -36,20 +36,6 @@ function NameValidator() {
   }
   
 
-
-
-function emailSignUpValidator() {
-  if (validateEmail(emailSignup.value)) {
-    emailError.style.display = "none";
-    emailSignup.classList.remove("input-error");
-    return true;
-  } else {
-    emailError.style.display = "block";
-    emailSignup.classList.add("input-error");
-    return false;
-  }
-}
-
   //Function that makes the user get a error one at a time:
   // export function formValidator(event) {
   //   if (
@@ -66,9 +52,8 @@ export function formValidator(event) {
     const Name = NameValidator(); 
     const phoneNumber = phoneNumberValidator(); 
     const email = emailValidator(); 
-    const signUpEmail = emailSignUpValidator();
 
-    if (!Name || !phoneNumber || !email || !signUpEmail){
+    if (!Name || !phoneNumber || !email){
         event.preventDefault(); 
     }
 }
