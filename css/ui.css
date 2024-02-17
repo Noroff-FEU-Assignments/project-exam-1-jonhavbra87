@@ -427,7 +427,6 @@ textarea:focus {
   background-color: var(--light);
   color: var(--black);
   border-radius: 10px;
-  /* padding: 0.7rem 1.5rem; */
   margin: 10px auto;
   text-align: center;
   font-weight: 600;
