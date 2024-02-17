@@ -4,5 +4,5 @@ import { initializeNavigation } from "../js/ui/navigation.js";
 //////////////////// INDEX ///////////////////////////
 
 initializeNavigation();
-await router();
+router();
 
