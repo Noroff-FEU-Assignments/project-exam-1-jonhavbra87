@@ -7,6 +7,7 @@ export function imageModal() {
 		  const modalImg = document.getElementById("modalImage");
 		  modal.style.display = "flex";
 		  modalImg.src = this.src;
+		  modalImg.alt = this.alt;
 		});
 	});
 
