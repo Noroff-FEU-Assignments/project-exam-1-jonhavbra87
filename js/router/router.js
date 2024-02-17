@@ -4,6 +4,7 @@ import { createCarousel } from "../pages/homePage.js";
 import { formValidator } from "../ui/forms.js";
 import { loadMorePosts } from "../ui/loadMorePosts.js";
 import { imageModal } from "../ui/modal.js";
+import { redirectHome } from "../ui/timeout.js";
 
 
 //////////////////// ROUTER ///////////////////////////
@@ -28,17 +29,20 @@ export async function router() {
     break;
         case "/contact/":
         case "/contact":
-        case "contact/index.html":
+        case "/contact/index.html":
             imageModal();
             const form = document.querySelector("#contactForm");
             form.addEventListener("submit", formValidator);
     break;
-        case "/newslettersuccsess/":
-        case "/newslettersuccsess":
-        case "/newslettersuccsess/index.html":
-            setTimeout(function() {
-                window.location.href = '/index.html';
-            }, 5000);
+        case "/contactsuccess/":
+        case "/contactsuccess":
+        case "/contactsuccess/index.html":
+            await redirectHome();
+    break;
+        case "/newslettersuccess/":
+        case "/newslettersuccess":
+        case "/newslettersuccess/index.html":
+            await redirectHome();
     break
         case "/":
         case "index.html":

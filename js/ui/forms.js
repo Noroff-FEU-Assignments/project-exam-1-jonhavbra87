@@ -3,7 +3,8 @@ const NameError = document.querySelector("#NameError");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
 const phone = document.querySelector("#phone");
-const emailSignup = document.querySelector("#emailSignup");
+const story = document.querySelector("#story");
+const storyError = document.querySelector("#storyError");
 
 function NameValidator() {
     if (checkLength(Name.value, 4) === true) {
@@ -35,6 +36,15 @@ function NameValidator() {
     }
   }
   
+  function storyValidator() {
+    if (checkLength(story.value, 24) === true) {
+      storyError.style.display = "none";
+      return true;
+    } else {
+      storyError.style.display = "block";
+      return false;
+    }
+}
 
   //Function that makes the user get a error one at a time:
   // export function formValidator(event) {
@@ -52,8 +62,9 @@ export function formValidator(event) {
     const Name = NameValidator(); 
     const phoneNumber = phoneNumberValidator(); 
     const email = emailValidator(); 
+    const validStory = storyValidator();
 
-    if (!Name || !phoneNumber || !email){
+    if (!Name || !phoneNumber || !email || !validStory){
         event.preventDefault(); 
     }
 }
@@ -70,7 +81,7 @@ export function formValidator(event) {
 function validateEmail(email) {
     const regEx = /^\S+@\S+.\S+$/;
     const patternMatches = regEx.test(email);
-    console.log(typeof patternMatches);
+    //console.log(typeof patternMatches);
     return patternMatches;
 }
 
