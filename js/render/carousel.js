@@ -11,7 +11,7 @@ export function renderCarousel(postData) {
     }
 
     // Creating the container for each blog post
-    const postContainer = document.createElement("div");
+    const postContainer = document.createElement("article");
     postContainer.classList.add("slide");
 
     // Adding the featured image if available
@@ -32,7 +32,7 @@ export function renderCarousel(postData) {
     title.classList.add("carousel-title");
 
 
-    // Adding a read more button (anchortag)
+    // Adding a read more button
     const readMoreButton = document.createElement("a");
     readMoreButton.href = "/blogspecific/?id=" + postData.id;
     readMoreButton.classList.add("carousel-button");

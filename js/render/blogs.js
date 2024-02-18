@@ -12,7 +12,7 @@ export function renderBlogs(postData) {
     }
 
     // Creating the container for each blog post
-    const postContainer = document.createElement("div");
+    const postContainer = document.createElement("article");
     postContainer.classList.add("blog-post-container");
 
     // Adding the featured image if available

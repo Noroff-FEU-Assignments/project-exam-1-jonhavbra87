@@ -72,7 +72,7 @@ nav a.active {
   min-width: 100vw;
   left: 50%;
   transform: translateX(-50%);
-  background-image: url(/images/hero-pic.png);
+  background-image: url(/images/hero-pic.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
