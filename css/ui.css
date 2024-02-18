@@ -6,7 +6,7 @@
   align-items: end;
   bottom: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100%;
 }
 
@@ -15,8 +15,7 @@
 }
 
 .header-logo img {
-  margin: 10px 0px 10px 50px;
-  height: 75px;
+  height: 80px;
 }
 
 /* ----------------- Navigation Styling ----------------- */
