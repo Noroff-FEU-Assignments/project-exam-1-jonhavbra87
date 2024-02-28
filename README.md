@@ -1,71 +1,67 @@
 ## Project Exam 1
+![image](https://portfolio.kongsvinger-it.no/img/pe1_desktop.jpg)]
 
-## Goal
+## Description
+### Goal
 
 To put into practice the skills learned over your first year of studies.
 
-## Brief
+### Brief
 
 You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
 
-- Home page
+- Home page: feature a carousel (latest posts)
 - About page
-- List of blog posts
-- Blog post specific pages
-- Contact page.
-
-### Home Page
-
-The home page should feature a 'Latest Posts' section, designed as a carousel (slider) for the desktop version. As an example, you could display four posts at a time, although you're welcome to adjust this number to better suit your design. Users should be able to click an arrow on the right to scroll through to the next set of posts, and an arrow on the left to view the previous set. For the mobile version, you are free to alter the layout as you deem appropriate, without being tied to a carousel format.
-
-### Blog Page
-
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
-
-### Blog Specific Page
-
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
-
-If images on the blog specific page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
-
-### Contact page
-
-Create a contact us page, there should be 4 textboxes on this page.
-
-- Name (Should be more than 5 characters long)
-- Email address (Must be a valid email address)
-- Subject (Should be more than 15 characters long)
-- Message content (Should be more than 25 characters long)
-
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
+- List of blog posts (Has a load more button)
+- Blog post specific pages (modal img and dynamic title)
+- Contact page (JavaScript validation form)
 
 ### WordPress
+Use WordPress as an content management to setup an API for consumption for my blog posts.
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data.
 
-The project has two aspects:
+## Built With
+<p align="left">
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/93e4e94382fb2211baf595fd981ec363e1400d1ad208321396344b2eb998b51f/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f68746d6c352e737667" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/10e5da35078001d86532bb75efeecf75aaca2765af099b3a2592a22fd12cb2e0/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f637373332e737667" /></a>
+<a href="https://www.javatpoint.com/what-is-vanilla-javascript" target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/8e946c2804fdccdb848c1109042c5398ea6bf93367d82f83aad430b722f50d9b/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6a6176617363726970742e737667" /></a>
+<a href="https://developer.wordpress.org/rest-api/" target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/d5de95dd0d27e74bfe80901cdea3688b2d4c82357c2a6466f6dd03c8fb2e7b56/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f776f726470726573732e737667" /></a>
+<a href="https://www.phpmyadmin.net/" target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/26fd5f4d543ff70a6ea4e085139edb717bfab7979960e0fafc9bd92cd1c7727f/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f7068702e737667" /></a>
 
-- API from your WordPress installation
-- Your website built with HTML, CSS and JavaScript
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+## Getting Started
+Visit the website [here](https://gamehub.kongsvinger-it.no/)
 
-Note that this is an exam, and therefore tutor support will be limited as per the study .
+### Installing
 
-## Level 1 Process
+1. Clone the repo:
 
-1. Decide on the theme for the blog you’re going to make
-2. Create a prototype of the website
-3. Install WordPress on your web host and add the blogs on the admin panel.
-4. Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5. Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6. Install Hotjar on your website.
-7. Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8. Write a report documenting your project (template provided in this repository).
-9. Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
+```bash
+git clone [https://github-repo](https://github.com//Noroff-FEU-Assignments/project-exam-1-jonhavbra87/)
+```
 
-## Level 2 Process (optional)
 
-1. You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for.
-2. Post the data from the contact form to WordPress so you have the details saved.
-3. Allow users to submit comments on a blog post, and post this data to WordPress
+2. Install the dependencies:
+
+```
+npm install
+```
+
+### Running
+
+To run the app, run the following commands:
+
+```bash
+npm run start
+```
+
+## Contributing
+
+If you want to contribute, I would appreciate it if you open a pull request, so that the code can be reviewed.
+
+## Contact
+<p align=left>
+       <a href="https://no.linkedin.com/in/jon-are-haver%C3%A5en-bratt%C3%A5s-5a3805262?trk=people-guest_people_search-card"><img width="50px" src="https://camo.githubusercontent.com/6eeeae9698286e45eda5d2973026a896fd42fa7f4271bf31aa74e9557e82181a/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6c696e6b6564696e2e737667" /></a>
+        <a href="https://www.discord.com"><img width="50px" src="https://camo.githubusercontent.com/f66a24788a2818b82624c61c17c513d16ea14ac6c579dd1c2b3ffe5df8c6cc22/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f646973636f72642e737667" /></a>
+     <a href="https://www.facebook.com"><img width="50px" src="https://camo.githubusercontent.com/05bf51513179d5b864921ba868f4bf54d2d74054f8f293f4569d969409b60a69/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f66616365626f6f6b2e737667" /></a>
+         <a href="https://www.instagram.com/jonareb87?igsh=MTAwdDEzZHFwMWFjbQ%3D%3D&utm_source=qr"><img width="50px" src="https://camo.githubusercontent.com/d94fd60f67ea9647bb508da87ad32b1eacd2bfb6745fac2be9869f9483bd0dca/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f696e7374616772616d2e737667" /></a>
