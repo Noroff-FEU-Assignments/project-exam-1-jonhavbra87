@@ -1,5 +1,5 @@
 ## Project Exam 1
-![image](https://portfolio.kongsvinger-it.no/img/pe1_desktop.jpg)]
+![image](https://portfolio.kongsvinger-it.no/img/pe1_desktop.jpg)
 
 ## Description
 ### Goal
