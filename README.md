@@ -38,6 +38,7 @@ Visit the website [here](https://kil-handball.kongsvinger-it.no/)
 
 ```bash
 git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-jonhavbra87.git
+```
 
 2. Install the dependencies:
 
