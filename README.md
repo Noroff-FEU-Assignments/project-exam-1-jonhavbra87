@@ -17,7 +17,7 @@ You have been tasked with creating a blog site. You can choose the design and to
 - Contact page (JavaScript validation form)
 
 ### WordPress
-Use WordPress as an content management to setup an API for consumption for my blog posts.
+Use WordPress as an content management to setup an API for consumption for blog posts.
 
 
 ## Built With
@@ -30,7 +30,7 @@ Use WordPress as an content management to setup an API for consumption for my bl
 
 
 ## Getting Started
-Visit the website [here](https://gamehub.kongsvinger-it.no/)
+Visit the website [here](https://kil-handball.kongsvinger-it.no/)
 
 ### Installing
 
