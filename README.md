@@ -7,8 +7,7 @@
 To put into practice the skills learned over your first year of studies.
 
 ### Brief
-
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
+The exam we were assigned focused on creating a blog site. We could choose the topic of the blog ourselves, and I chose a realistic theme, creating a website about the local handball club. The blog posts were supposed to be news from the club, and the website was intended to be a place for coaches, parents, and athletes to gather information. The blog site should have at least the following pages:
 
 - Home page: feature a carousel (latest posts)
 - About page
@@ -33,29 +32,15 @@ Use WordPress as an content management to setup an API for consumption for blog 
 Visit the website [here](https://kil-handball.kongsvinger-it.no/)
 
 ### Installing
-
-1. Clone the repo:
-
+Clone the repo:
 ```bash
-git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-jonhavbra87.git
-```
-
-2. Install the dependencies:
-
-```
-npm install
+git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-jonhavbra87
 ```
 
 ### Running
-
-To run the app, run the following commands:
-
-```bash
-npm run start
-```
+Clone the repo, open in VSCode. Right click on the index.html and open in Live Server.
 
 ## Contributing
-
 If you want to contribute, I would appreciate it if you open a pull request, so that the code can be reviewed.
 
 ## Contact
