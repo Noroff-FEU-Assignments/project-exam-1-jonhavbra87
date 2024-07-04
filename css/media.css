@@ -159,77 +159,166 @@
 /* ----------------- PHONE Styling ----------------- */
 @media (max-width: 500px) {
   :root {
+    --icon-size: 3rem;
     --font-size-p: 0.875rem;
     --font-size-h1: 1.7rem;
     --font-size-h2: 1.4rem;
     --font-size-h3: 1.2rem;
   }
 
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
   header {
-    display: block;
+    display: fixed;
+    background: transparent;
     width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: auto;
   }
 
   .header-content {
-    display: block;
-    height: 100px;
-  }
-  .header-logo img {
-    margin: 10px 0px 10px 50px;
-  }
-  .menu-toggle {
-    display: block;
-    font-size: 3rem;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 30px;
-    z-index: 1000;
-    background: transparent;
-    border: none;
-    color: var(--light);
-  }
-  /* ----------------- Navigation Styling ----------------- */
-  .navigation {
-    display: none;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 998;
-    transition: max-height 0.5s ease-out, opacity 0.1s ease-out;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    border-radius: 0 0 5px 5px;
-  }
-
-  .navigation a {
-    padding: 1rem;
-  }
-  .navigation li {
-    color: var(--light);
-    background-color: var(--red);
-  }
-
-  .navigation.open {
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--light);
+  }
+
+  .header-logo img {
+    /* margin: 10px 0px 10px 50px; */
+    height: 40px;
+    padding: 10px 0;
+  }
+
+  /* ----------------- Navigation Styling ----------------- */
+
+  .navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    flex-direction: row;
+    width: 100%;
+    height: 70px;
+    background: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .navigation ul {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .navigation ul li {
+    position: relative;
+    list-style: none;
+    flex: 1;
+    height: 70px;
+    z-index: 1001;
+  }
+
+  .navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    z-index: 999;
-    max-height: 500px;
-    opacity: 1;
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
   }
 
-  nav a.active {
-    border-radius: 0;
+  .navigation ul li a .icon {
+    position: relative;
+    display: block;
+    font-size: var(--icon-size) !important;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--light);
   }
 
-  .fa-bars,
-  .fa-xmark {
-    font-size: var(--font-size-h1);
-    transition: opacity 0.3s ease-out;
-    opacity: 1;
+  .navigation ul li.active a .icon {
+    transform: translateY(-40px);
+    color: var(--black);
   }
+
+  .navigation ul li a .text {
+    position: absolute;
+    color: var(--light);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: var(--font-size-p);
+    text-align: center;
+    letter-spacing: 0.2rem;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .navigation ul li.active a .text {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+
+  .indicator {
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: var(--light);
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Added ease-in-out */
+    opacity: 0;
+  }
+
+  .indicator::before,
+  .indicator::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+  }
+
+  .indicator::before {
+    left: -22px;
+    border-top-right-radius: 20px;
+  }
+
+  .indicator::after {
+    right: -22px;
+    border-top-left-radius: 20px;
+  }
+
+  /* 
+  .navigation ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(calc(70px * 0));
+  }
+
+  .navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(70px * 1));
+  }
+
+  .navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(70px * 2));
+  }
+
+  .navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(70px * 3));
+  }
+
+  .navigation ul li:nth-child(5).active ~ .indicator {
+    transform: translateX(calc(70px * 4));
+  } */
 
   /* ----------------- Hero Styling ----------------- */
   .hero-banner {
